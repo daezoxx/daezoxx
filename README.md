@@ -1,66 +1,68 @@
-🎮 **Founding AI Engineer TaxTech & Compliance Platforms | M.Sc in Computer Games Technology | 300M+ Game Visits 🚀**
+🎮 **AI Engineer TaxTech & Compliance Platforms | M.Sc in Computer Games Technology | 300M+ Game Visits 🚀**
 
 # Hi, I'm Zaex! 👋
 
-I'm a technically equipped creative visionary who's an AI Engineer &  game developer that works with cutting edge Artificial Intelligence and Machine Learning. Fostered under University of London with a Master’s in Computer Games Technology from City St George's University of London, specializing in building and leading talented development workflows to create immersive, large-scale experiences. With over 300 million visits across my games, I’ve taken projects from concept to execution, focusing on both the technical and creative aspects of game development. I combine creative product leadership with deep technical skills in ML, LLMs, embeddings, vector search, and secure production integrations to ship pragmatic TaxTech and Compliance solutions.
+I'm a technically equipped creative visionary I’m an AI Engineer at AskSolique, building next-generation TaxTech and Compliance automation systems powered by LLMs, embeddings, vector search, and end-to-end intelligent workflows. With a Master’s in Computer Games Technology from the University of London and 300M+ visits across the games I’ve built, I blend creative product engineering with deep technical capability to deliver scalable, auditable, real-world AI solutions. I’ve taken projects from concept to execution, focusing on both the technical and creative aspects of development. I combine creative product leadership with deep technical skills in ML, LLMs, embeddings, vector search, and secure production integrations to ship pragmatic TaxTech and Compliance solutions.
 
-## 🌟 **What I Do:**
-- **AI Fuelled Automation Workflows**: I handcraft personalized AI end to end workflows that fit every kind of business need that arises. 
-- **Game Development Lead**: I've directed the entire game development lifecycle—from concept and prototyping to final release and live service updates.
-- **Team Leadership**: I manage cross-functional teams, ensuring seamless collaboration between designers, developers, and artists to bring our visions to life.
-- **Creative Direction**: My passion lies in designing unique game mechanics, creating engaging worlds, and pushing the boundaries of what’s possible in with AI to create immersive experiences on and off the screen.
+## 🌟 **What I Do @ Solique:**
+- **AI-Fueled Compliance & Tax Automation:** Architect and implement intelligent workflows that turn complex regulatory texts into structured, actionable decisions.
+- **Hybrid Retrieval Systems:** Build BM25 + vector search pipelines, RAG systems, and LLM-driven summarization layers optimized for auditability.
+- **Document-to-Decision Engines:** Develop ingestion-to-recommendation pipelines that convert filings, notices, and rulings into clear compliance outputs with provenance metadata.
+- **Risk Scoring & Monitoring:** Design rule + ML hybrid scoring systems to detect anomalies, reduce false positives, and provide explainable outputs.
+- **Secure, Production-Grade Services:** Deliver scalable and safe LLM integrations with strict controls, logging, and traceability for compliance environments.
 
-## 🔥 **Skills:**
-- **AI + TaxTech Products:** Design and deliver AI agents and pipelines that automate tax research, document classification, regulatory extraction, and risk scoring.
-- **Game & Systems Development:** Lead end-to-end game engineering and large-scale real-time architectures while applying ML-driven features to improve player engagement.
-- **Compliance Automation:** Create workflows for regulatory monitoring, document summarization, and audit trail generation to reduce manual review and improve controlability.
-- **Team Leadership:** Build and scale cross-functional teams to move rapidly from prototype to production.
-- **Game Design**: End-to-end game development, level design, and player experience optimization.
-- **Project Management**: Agile workflows, task prioritization, and managing full development cycles.
-- **Community Building**: Fostering active communities on Discord and YouTube, engaging players, and gathering feedback to improve gameplay.
+## 🔥 **Skills & Expertise:**
 
+- **TaxTech & Compliance Engineering**
+  - Regulatory extraction and structuring of dense tax law into machine-usable formats
+  - Automated residency logic, treaty classification, and regulatory lookup flows
+  - RAG pipelines with citation preservation, source mapping, and audit trails
+  - Workflow orchestration for compliance teams (search → classify → recommend → record)
 
-## **TaxTech & Compliance**
+- **AI & ML Systems**
+  - LLM orchestration, embeddings, vector search, hybrid retrieval
+  - Python automation pipelines, ETL, streaming ingestion, bulk indexing
+  - Confidence scoring, reranking, and safety-controlled prompting
+  - Postgres, Elasticsearch/Qdrant, metrics, observability & governance
 
-- **Regulatory Extraction:** Convert dense statutes, notifications, and rulings into structured knowledge using hybrid retrieval (BM25 + vector) and LLM summarization for fast, auditable lookups.
-- **Document-to-Decision Pipelines:** Architect systems that ingest filings, map obligations, and surface compliance actions with confidence scores and provenance metadata.
-- **Automated Residency & Tax Advice Tools:** Prototype decision-assist flows (questions → hybrid search → LLM-rerank → explanation) that help determine tax residency and treaty implications while preserving source citations.
-- **Auditability & Controls:** Emphasize traceable outputs — store source IDs, timestamps, and prompts; preserve original text; and produce machine-readable trails for review.
-- **Risk Scoring & Alerts:** Combine rule-based checks with ML signals to prioritize potential compliance issues and reduce false positives.
+- **Game & Systems Development**
+  - End-to-end real-time systems architecture and gameplay engineering
+  - Leading multi-disciplinary teams through concept, prototype, release & live ops
+  - Designing player-driven mechanics and ML-enhanced engagement systems
 
-
-## **AI & Technical Skills:**
-
-- **Models & Patterns:** LLMs (OpenAI/compatible), SentenceTransformers (embeddings), vector search (Elasticsearch/Qdrant), RAG and hybrid retrieval, prompt engineering, model gating for safety/cost control.
-- **Engineering:** Python pipelines, streaming ETL, batch encoding, bulk index tuning, TLS/auth for secure services, Postgres + analytics.
-- **Production Practices:** Env-driven configs, dry-run safety, incremental syncs, metrics/logging, settings restore, and small-batch safety for live clusters.
-- **DevOps & Governance:** CI-friendly scripts, audit logging, reproducible runs, and risk-mitigation patterns for model outputs.
-
-
-## **Impact & Outcomes (how I measure success)**
-
-- Faster expert triage (prototype reductions in time-to-answer).
-- Traceable recommendations (source-linked summaries for auditors).
-- Scalable ingestion (streaming ETL + tuned bulk indexing for large corpora).
+- **Leadership & Product Delivery**
+  - Cross-functional coordination
+  - Clear technical direction
+  - Rapid prototyping → hardened production rollout
+  - Community engagement and feedback-driven iteration
 
 ---
 
-## 🌍 **Join My Community:**
-- [Discord Server](discord-invite-link): Join my growing community of developers and players!
-- [YouTube Channel](youtube-link): Check out devlogs, tutorials, and behind-the-scenes of our game development process.
+- **Impact & Outcomes**
+  - Reduced time-to-answer for tax research through structured, high-precision retrieval + summarization.
+  - Auditable AI outputs with source IDs, timestamps, and reversible trails.
+  - Scalable ingestion for large regulatory corpora using optimized bulk indexing and streaming ETL.
+  - Higher compliance confidence via transparent decision workflows and risk scoring.
 
 ---
 
-## 🎯 **What I'm Working On:**
-- **Crafting Groundbreaking AI Workflows** to build AI Agents to provide meaningful solutions to real world problems.
-- **Scaling game development teams** to work on even larger, more ambitious Roblox projects.
-- **Pushing the limits** of game development with advanced mechanics and AI-driven systems.
+- 🎯 **What I'm Working On**
+- Building AI agents and regulatory intelligence workflows for global-scale TaxTech use cases.
+- Expanding Askolique’s automated compliance fabric with traceable LLM reasoning.
+- Designing ML-driven game mechanics and scaling teams for the next generation of Roblox experiences.
 
 ---
 
-## 🚀 **Let's Collaborate:**
-- I'm always looking for talented developers, designers, and artists who want to create the next big thing in gaming or AI Space.
+## 🚀 **Let’s Connect & Collaborate:**
+- I love working with talented engineers, creators, and innovators—whether in AI workflow automation, enterprise TaxTech, or large-scale game worlds.
 - **Ask me about** innovating efficient AI workflows to automate your systems and maximise profits, managing game development teams, building engaging player experiences, or community building in the gaming space.
+- If you're looking to:
+  - Automate tax research or compliance processes
+  - Build AI-assisted workflows with strong governance
+  - Scale a game dev team or craft immersive player experiences
+  - Stand up reliable, production-friendly LLM systems
+
+  —I'm all ears.
 
 ---
 
