@@ -3,7 +3,7 @@
 <!--   GitHub Profile README — Production Grade               -->
 <!--   HOW TO USE:                                            -->
 <!--   1. Upload /assets/*.svg files to your repo root        -->
-<!--   2. Replace YOUR_GITHUB_USERNAME in stats URLs          -->
+<!--   2. Replace dhanu-nagarajan in stats URLs          -->
 <!--   3. Update LinkedIn URL                                 -->
 <!-- ══════════════════════════════════════════════════════════ -->
 
@@ -65,17 +65,17 @@
 
 <div align="center">
 
-[![GitHub Stats](https://github-readme-stats.vercel.app/api?username=YOUR_GITHUB_USERNAME&show_icons=true&theme=radical&bg_color=020010&border_color=00f5ff&title_color=00f5ff&text_color=aaffee&icon_color=b400ff&ring_color=b400ff)](https://github.com/YOUR_GITHUB_USERNAME)
+[![GitHub Stats](https://github-readme-stats.vercel.app/api?username=dhanu-nagarajan&show_icons=true&theme=radical&bg_color=020010&border_color=00f5ff&title_color=00f5ff&text_color=aaffee&icon_color=b400ff&ring_color=b400ff)](https://github.com/dhanu-nagarajan)
 &nbsp;&nbsp;
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_GITHUB_USERNAME&layout=compact&bg_color=020010&border_color=b400ff&title_color=b400ff&text_color=aaffee)](https://github.com/YOUR_GITHUB_USERNAME)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=dhanu-nagarajan&layout=compact&bg_color=020010&border_color=b400ff&title_color=b400ff&text_color=aaffee)](https://github.com/dhanu-nagarajan)
 
 <br/>
 
-[![Streak](https://streak-stats.demolab.com?user=YOUR_GITHUB_USERNAME&theme=radical&background=020010&border=00f5ff&stroke=b400ff&ring=00f5ff&fire=ffd700&currStreakLabel=00f5ff&sideLabels=b400ff&dates=aaffee)](https://github.com/YOUR_GITHUB_USERNAME)
+[![Streak](https://streak-stats.demolab.com?user=dhanu-nagarajan&theme=radical&background=020010&border=00f5ff&stroke=b400ff&ring=00f5ff&fire=ffd700&currStreakLabel=00f5ff&sideLabels=b400ff&dates=aaffee)](https://github.com/dhanu-nagarajan)
 
 <br/>
 
-[![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=YOUR_GITHUB_USERNAME&bg_color=020010&color=00f5ff&line=b400ff&point=ffd700&area=true&hide_border=false&border_color=00f5ff)](https://github.com/YOUR_GITHUB_USERNAME)
+[![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=dhanu-nagarajan&bg_color=020010&color=00f5ff&line=b400ff&point=ffd700&area=true&hide_border=false&border_color=00f5ff)](https://github.com/dhanu-nagarajan)
 
 </div>
 
@@ -117,7 +117,7 @@
 &nbsp;
 [![Website](https://img.shields.io/badge/WEBSITE-progamedev.pro-b400ff?style=for-the-badge&logo=firefoxbrowser&logoColor=b400ff&labelColor=0e0018)](https://progamedev.pro/)
 &nbsp;
-[![LinkedIn](https://img.shields.io/badge/LINKEDIN-Connect-0a66c2?style=for-the-badge&logo=linkedin&logoColor=00f5ff&labelColor=011020)](https://linkedin.com/in/YOUR_LINKEDIN)
+[![LinkedIn](https://img.shields.io/badge/LINKEDIN-Connect-0a66c2?style=for-the-badge&logo=linkedin&logoColor=00f5ff&labelColor=011020)](https://linkedin.com/in/progamedev)
 
 </div>
 
@@ -146,8 +146,8 @@
       └── outro.svg      ← system online outro
 
   REPLACE THESE PLACEHOLDERS:
-  • YOUR_GITHUB_USERNAME  → your actual GitHub handle (x4 spots)
-  • YOUR_LINKEDIN         → your LinkedIn URL slug
+  • dhanu-nagarajan  → your actual GitHub handle (x4 spots)
+  • progamedev         → your LinkedIn URL slug
 
   ALL SVG ANIMATIONS WORK BECAUSE:
   • SVG files are served as <img src="./assets/file.svg">
