@@ -76,7 +76,9 @@ Previously built game systems serving <strong>300M+ player visits</strong> on Ro
 <div align="center">
 
 [![GitHub Stats](https://github-readme-stats.vercel.app/api?username=dhanu-nagarajan&show_icons=true&theme=radical&bg_color=020010&border_color=00f5ff&title_color=00f5ff&text_color=aaffee&icon_color=b400ff&ring_color=b400ff)](https://github.com/dhanu-nagarajan)
-&nbsp;&nbsp;
+
+<br/>
+
 [![Streak](https://streak-stats.demolab.com?user=dhanu-nagarajan&theme=radical&background=020010&border=00f5ff&stroke=b400ff&ring=00f5ff&fire=ffd700&currStreakLabel=00f5ff&sideLabels=b400ff&dates=aaffee)](https://github.com/dhanu-nagarajan)
 
 </div>
