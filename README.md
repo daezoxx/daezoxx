@@ -1,74 +1,159 @@
-🎮 **AI Engineer TaxTech & Compliance Platforms | M.Sc in Computer Games Technology | 300M+ Game Visits 🚀**
+<!-- ══════════════════════════════════════════════════════════ -->
+<!--   ZAEX — REGULATORY INTELLIGENCE ARCHITECT               -->
+<!--   GitHub Profile README — Production Grade               -->
+<!--   HOW TO USE:                                            -->
+<!--   1. Upload /assets/*.svg files to your repo root        -->
+<!--   2. Replace YOUR_GITHUB_USERNAME in stats URLs          -->
+<!--   3. Update LinkedIn URL                                 -->
+<!-- ══════════════════════════════════════════════════════════ -->
 
-# Hi, I'm Zaex! 👋
+<div align="center">
 
-I'm a technically equipped creative visionary I’m an AI Engineer at AskSolique, building next-generation TaxTech and Compliance automation systems powered by LLMs, embeddings, vector search, and end-to-end intelligent workflows. With a Master’s in Computer Games Technology from the University of London and 300M+ visits across the games I’ve built, I blend creative product engineering with deep technical capability to deliver scalable, auditable, real-world AI solutions. I’ve taken projects from concept to execution, focusing on both the technical and creative aspects of development. I combine creative product leadership with deep technical skills in ML, LLMs, embeddings, vector search, and secure production integrations to ship pragmatic TaxTech and Compliance solutions.
+<img src="./assets/banner.svg" alt="ZAEX — AI Systems Engineer · TaxTech Intelligence · Worldbuilder" width="900"/>
 
-## 🌟 **What I Do @ Solique:**
-- **AI-Fueled Compliance & Tax Automation:** Architect and implement intelligent workflows that turn complex regulatory texts into structured, actionable decisions.
-- **Hybrid Retrieval Systems:** Build BM25 + vector search pipelines, RAG systems, and LLM-driven summarization layers optimized for auditability.
-- **Document-to-Decision Engines:** Develop ingestion-to-recommendation pipelines that convert filings, notices, and rulings into clear compliance outputs with provenance metadata.
-- **Risk Scoring & Monitoring:** Design rule + ML hybrid scoring systems to detect anomalies, reduce false positives, and provide explainable outputs.
-- **Secure, Production-Grade Services:** Deliver scalable and safe LLM integrations with strict controls, logging, and traceability for compliance environments.
+</div>
 
-## 🔥 **Skills & Expertise:**
+<br/>
 
-- **TaxTech & Compliance Engineering**
-  - Regulatory extraction and structuring of dense tax law into machine-usable formats
-  - Automated residency logic, treaty classification, and regulatory lookup flows
-  - RAG pipelines with citation preservation, source mapping, and audit trails
-  - Workflow orchestration for compliance teams (search → classify → recommend → record)
+<div align="center">
 
-- **AI & ML Systems**
-  - LLM orchestration, embeddings, vector search, hybrid retrieval
-  - Python automation pipelines, ETL, streaming ingestion, bulk indexing
-  - Confidence scoring, reranking, and safety-controlled prompting
-  - Postgres, Elasticsearch/Qdrant, metrics, observability & governance
+<img src="./assets/terminal.svg" alt="ZAEX Terminal Bio" width="860"/>
 
-- **Game & Systems Development**
-  - End-to-end real-time systems architecture and gameplay engineering
-  - Leading multi-disciplinary teams through concept, prototype, release & live ops
-  - Designing player-driven mechanics and ML-enhanced engagement systems
+</div>
 
-- **Leadership & Product Delivery**
-  - Cross-functional coordination
-  - Clear technical direction
-  - Rapid prototyping → hardened production rollout
-  - Community engagement and feedback-driven iteration
+<br/>
 
 ---
 
-- **Impact & Outcomes**
-  - Reduced time-to-answer for tax research through structured, high-precision retrieval + summarization.
-  - Auditable AI outputs with source IDs, timestamps, and reversible trails.
-  - Scalable ingestion for large regulatory corpora using optimized bulk indexing and streaming ETL.
-  - Higher compliance confidence via transparent decision workflows and risk scoring.
+<div align="center">
+
+<img src="./assets/pipeline.svg" alt="Compliance Intelligence Pipeline" width="900"/>
+
+</div>
+
+<br/>
 
 ---
 
-- 🎯 **What I'm Working On**
-- Building AI agents and regulatory intelligence workflows for global-scale TaxTech use cases.
-- Expanding Askolique’s automated compliance fabric with traceable LLM reasoning.
-- Designing ML-driven game mechanics and scaling teams for the next generation of Roblox experiences.
+## ⚡ Tech Stack
+
+<div align="center">
+
+<!-- Row 1 -->
+![Python](https://img.shields.io/badge/Python-020010?style=for-the-badge&logo=python&logoColor=00f5ff&labelColor=011020&color=00f5ff)
+![Elasticsearch](https://img.shields.io/badge/Elasticsearch-020010?style=for-the-badge&logo=elasticsearch&logoColor=ffd700&labelColor=0e0a00&color=ffd700)
+![Qdrant](https://img.shields.io/badge/Qdrant-020010?style=for-the-badge&logo=databricks&logoColor=b400ff&labelColor=0e0018&color=b400ff)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-020010?style=for-the-badge&logo=postgresql&logoColor=2ed573&labelColor=001408&color=2ed573)
+![LLM Orchestration](https://img.shields.io/badge/LLM_Orchestration-020010?style=for-the-badge&logo=openai&logoColor=ff6b9d&labelColor=140010&color=ff6b9d)
+![RAG](https://img.shields.io/badge/RAG_Pipelines-020010?style=for-the-badge&logo=amazonaws&logoColor=00f5ff&labelColor=011020&color=00f5ff)
+
+<!-- Row 2 -->
+![BM25](https://img.shields.io/badge/BM25_Hybrid_Search-020010?style=for-the-badge&logo=algolia&logoColor=b400ff&labelColor=0e0018&color=b400ff)
+![ETL](https://img.shields.io/badge/ETL_Pipelines-020010?style=for-the-badge&logo=apacheairflow&logoColor=ffd700&labelColor=0e0a00&color=ffd700)
+![Embeddings](https://img.shields.io/badge/Vector_Embeddings-020010?style=for-the-badge&logo=huggingface&logoColor=2ed573&labelColor=001408&color=2ed573)
+![Observability](https://img.shields.io/badge/Observability-020010?style=for-the-badge&logo=grafana&logoColor=ff6b9d&labelColor=140010&color=ff6b9d)
+![Governance](https://img.shields.io/badge/LLM_Governance-020010?style=for-the-badge&logo=shield&logoColor=00f5ff&labelColor=011020&color=00f5ff)
+![Game Engine](https://img.shields.io/badge/Game_Engine-020010?style=for-the-badge&logo=roblox&logoColor=ffd700&labelColor=0e0a00&color=ffd700)
+
+</div>
+
+<br/>
 
 ---
 
-## 🚀 **Let’s Connect & Collaborate:**
-- I love working with talented engineers, creators, and innovators—whether in AI workflow automation, enterprise TaxTech, or large-scale game worlds.
-- **Ask me about** innovating efficient AI workflows to automate your systems and maximise profits, managing game development teams, building engaging player experiences, or community building in the gaming space.
-- If you're looking to:
-  - Automate tax research or compliance processes
-  - Build AI-assisted workflows with strong governance
-  - Scale a game dev team or craft immersive player experiences
-  - Stand up reliable, production-friendly LLM systems
+## 📡 Telemetry Feed
 
-  —I'm all ears.
+<div align="center">
+
+[![GitHub Stats](https://github-readme-stats.vercel.app/api?username=YOUR_GITHUB_USERNAME&show_icons=true&theme=radical&bg_color=020010&border_color=00f5ff&title_color=00f5ff&text_color=aaffee&icon_color=b400ff&ring_color=b400ff)](https://github.com/YOUR_GITHUB_USERNAME)
+&nbsp;&nbsp;
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_GITHUB_USERNAME&layout=compact&bg_color=020010&border_color=b400ff&title_color=b400ff&text_color=aaffee)](https://github.com/YOUR_GITHUB_USERNAME)
+
+<br/>
+
+[![Streak](https://streak-stats.demolab.com?user=YOUR_GITHUB_USERNAME&theme=radical&background=020010&border=00f5ff&stroke=b400ff&ring=00f5ff&fire=ffd700&currStreakLabel=00f5ff&sideLabels=b400ff&dates=aaffee)](https://github.com/YOUR_GITHUB_USERNAME)
+
+<br/>
+
+[![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=YOUR_GITHUB_USERNAME&bg_color=020010&color=00f5ff&line=b400ff&point=ffd700&area=true&hide_border=false&border_color=00f5ff)](https://github.com/YOUR_GITHUB_USERNAME)
+
+</div>
+
+<br/>
 
 ---
 
-📫 **How to Reach Me:**
-- [Email](cto@progamedev.pro)  
-- [Website](https://progamedev.pro/)
+<div align="center">
 
-😄 **Pronouns**: He/Him  
-⚡ **Fun Fact**: I’ve built virtual worlds that have been explored by hundreds of millions of players worldwide!
+<img src="./assets/skills.svg" alt="Skill Power Matrix" width="860"/>
+
+</div>
+
+<br/>
+
+---
+
+## 🚀 Active Systems
+
+<div align="center">
+
+| ⚖️ TaxTech Engine | 🤖 AI Agents | 🌍 Virtual Worlds |
+|:---:|:---:|:---:|
+| Regulatory Intelligence @ Solique | LLM Workflow Automation | 300M+ Visits — Roblox |
+| RAG · BM25 · Vector · Audit Trails | Orchestration · Safety · Governance | Real-time Systems · ML Mechanics |
+| ![LIVE](https://img.shields.io/badge/PRODUCTION-ACTIVE-2ed573?style=flat-square&labelColor=001408) | ![DEV](https://img.shields.io/badge/STATUS-IN_DEV-ffd700?style=flat-square&labelColor=0e0a00) | ![DEPLOYED](https://img.shields.io/badge/300M%2B-DEPLOYED-00f5ff?style=flat-square&labelColor=011020) |
+
+</div>
+
+<br/>
+
+---
+
+## 🔗 Uplink Channels
+
+<div align="center">
+
+[![Email](https://img.shields.io/badge/EMAIL-cto%40progamedev.pro-00f5ff?style=for-the-badge&logo=gmail&logoColor=00f5ff&labelColor=011020)](mailto:cto@progamedev.pro)
+&nbsp;
+[![Website](https://img.shields.io/badge/WEBSITE-progamedev.pro-b400ff?style=for-the-badge&logo=firefoxbrowser&logoColor=b400ff&labelColor=0e0018)](https://progamedev.pro/)
+&nbsp;
+[![LinkedIn](https://img.shields.io/badge/LINKEDIN-Connect-0a66c2?style=for-the-badge&logo=linkedin&logoColor=00f5ff&labelColor=011020)](https://linkedin.com/in/YOUR_LINKEDIN)
+
+</div>
+
+<br/>
+
+---
+
+<div align="center">
+
+<img src="./assets/outro.svg" alt="System Online — ZAEX Node Active" width="900"/>
+
+</div>
+
+<!--
+══════════════════════════════════════════════════════════
+  SETUP CHECKLIST
+══════════════════════════════════════════════════════════
+
+  REQUIRED FILES TO UPLOAD TO YOUR REPO:
+  ├── README.md          ← this file
+  └── assets/
+      ├── banner.svg     ← animated ZAEX hologram header
+      ├── terminal.svg   ← animated compliance console bio
+      ├── pipeline.svg   ← animated data flow diagram
+      ├── skills.svg     ← animated skill bars
+      └── outro.svg      ← system online outro
+
+  REPLACE THESE PLACEHOLDERS:
+  • YOUR_GITHUB_USERNAME  → your actual GitHub handle (x4 spots)
+  • YOUR_LINKEDIN         → your LinkedIn URL slug
+
+  ALL SVG ANIMATIONS WORK BECAUSE:
+  • SVG files are served as <img src="./assets/file.svg">
+  • CSS @keyframes inside SVG files are fully supported
+  • No JavaScript required, no inline SVG stripping
+  • GitHub renders SVG CSS animations correctly this way
+
+══════════════════════════════════════════════════════════
+-->
