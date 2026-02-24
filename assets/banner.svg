@@ -1,0 +1,138 @@
+<svg width="900" height="200" viewBox="0 0 900 200" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @keyframes scanMove {
+      0%   { transform: translateY(-4px); opacity: 0.5; }
+      100% { transform: translateY(204px); opacity: 0.1; }
+    }
+    @keyframes glitch1 {
+      0%,90%,100% { transform: translate(0,0); opacity: 0; }
+      92%          { transform: translate(-4px, 2px); opacity: 0.15; }
+      94%          { transform: translate(4px,-1px); opacity: 0.1; }
+      96%          { transform: translate(-2px, 1px); opacity: 0.12; }
+    }
+    @keyframes glitch2 {
+      0%,85%,100% { transform: translate(0,0); opacity: 0; }
+      87%          { transform: translate(5px,-2px); opacity: 0.12; }
+      89%          { transform: translate(-3px, 2px); opacity: 0.08; }
+    }
+    @keyframes titlePulse {
+      0%,100% { opacity: 1; filter: drop-shadow(0 0 12px #00f5ff) drop-shadow(0 0 30px #00f5ff80); }
+      50%      { opacity: 0.88; filter: drop-shadow(0 0 6px #00f5ff) drop-shadow(0 0 18px #b400ff80); }
+    }
+    @keyframes subtitleFade {
+      0%,100% { opacity: 0.85; }
+      50%      { opacity: 0.5; }
+    }
+    @keyframes nodePulse {
+      0%,100% { opacity: 0.75; }
+      50%      { opacity: 0.35; }
+    }
+    @keyframes dotBlink {
+      0%,100% { opacity: 1; }
+      50%      { opacity: 0.2; }
+    }
+    @keyframes borderFlow {
+      0%   { stroke-dashoffset: 0; }
+      100% { stroke-dashoffset: -3600; }
+    }
+    @keyframes cornerPulse {
+      0%,100% { opacity: 0.9; }
+      50%      { opacity: 0.4; }
+    }
+    .title {
+      animation: titlePulse 3s ease-in-out infinite;
+    }
+    .glitch1 { animation: glitch1 5s infinite; }
+    .glitch2 { animation: glitch2 7s infinite; }
+    .subtitle { animation: subtitleFade 4s ease-in-out infinite; }
+    .node-text { animation: nodePulse 2s ease-in-out infinite; }
+    .dot { animation: dotBlink 1.4s ease-in-out infinite; }
+    .scan { animation: scanMove 2.8s linear infinite; }
+    .border-anim {
+      stroke-dasharray: 30 10;
+      animation: borderFlow 8s linear infinite;
+    }
+    .corner { animation: cornerPulse 2.5s ease-in-out infinite; }
+  </style>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#020010"/>
+      <stop offset="100%" stop-color="#06002a"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#00f5ff"/>
+      <stop offset="40%"  stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#00f5ff"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#00f5ff" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#b400ff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="200" rx="14" fill="url(#bg)"/>
+
+  <!-- Subtle grid lines -->
+  <g opacity="0.04" stroke="#00f5ff" stroke-width="1">
+    <line x1="0" y1="25" x2="900" y2="25"/>
+    <line x1="0" y1="50" x2="900" y2="50"/>
+    <line x1="0" y1="75" x2="900" y2="75"/>
+    <line x1="0" y1="100" x2="900" y2="100"/>
+    <line x1="0" y1="125" x2="900" y2="125"/>
+    <line x1="0" y1="150" x2="900" y2="150"/>
+    <line x1="0" y1="175" x2="900" y2="175"/>
+    <line x1="150" y1="0" x2="150" y2="200"/>
+    <line x1="300" y1="0" x2="300" y2="200"/>
+    <line x1="450" y1="0" x2="450" y2="200"/>
+    <line x1="600" y1="0" x2="600" y2="200"/>
+    <line x1="750" y1="0" x2="750" y2="200"/>
+  </g>
+
+  <!-- Glow bloom behind title -->
+  <rect x="200" y="60" width="500" height="80" fill="url(#glow)" rx="40"/>
+
+  <!-- Animated border -->
+  <rect x="1" y="1" width="898" height="198" rx="14" fill="none"
+        stroke="#00f5ff" stroke-width="1.5" opacity="0.6" class="border-anim"/>
+
+  <!-- Corner decorators -->
+  <g class="corner" stroke="#00f5ff" stroke-width="2" fill="none">
+    <path d="M 22 8 L 8 8 L 8 28"/>
+    <path d="M 878 8 L 892 8 L 892 28"/>
+    <path d="M 22 192 L 8 192 L 8 172"/>
+    <path d="M 878 192 L 892 192 L 892 172"/>
+  </g>
+
+  <!-- Glitch layers (behind) -->
+  <text class="glitch1" x="450" y="104" text-anchor="middle"
+        font-family="'Courier New',monospace" font-size="74" font-weight="900"
+        letter-spacing="18" fill="#ff00ff">ZAEX</text>
+  <text class="glitch2" x="450" y="104" text-anchor="middle"
+        font-family="'Courier New',monospace" font-size="74" font-weight="900"
+        letter-spacing="18" fill="#00ff88">ZAEX</text>
+
+  <!-- Main ZAEX title -->
+  <text class="title" x="450" y="104" text-anchor="middle"
+        font-family="'Courier New',monospace" font-size="74" font-weight="900"
+        letter-spacing="18" fill="url(#titleGrad)">ZAEX</text>
+
+  <!-- Subtitle -->
+  <text class="subtitle" x="450" y="136" text-anchor="middle"
+        font-family="'Courier New',monospace" font-size="12" fill="#00f5ff" letter-spacing="5">
+    AI SYSTEMS ENGINEER  ·  TAXTECH INTELLIGENCE  ·  WORLDBUILDER
+  </text>
+
+  <!-- Status node -->
+  <text class="node-text" x="450" y="172" text-anchor="middle"
+        font-family="'Courier New',monospace" font-size="9" fill="#b400ff" letter-spacing="3">
+    [ NODE::SOLIQUE — REGULATORY INTELLIGENCE CORE — UPLINK: ACTIVE ]
+  </text>
+
+  <!-- Status dots -->
+  <circle class="dot" cx="200" cy="172" r="3" fill="#00f5ff" style="animation-delay:0s"/>
+  <circle class="dot" cx="700" cy="172" r="3" fill="#b400ff" style="animation-delay:0.7s"/>
+
+  <!-- Scan line -->
+  <rect class="scan" x="0" y="-4" width="900" height="3" fill="#00f5ff" opacity="0.4" rx="2"/>
+</svg>

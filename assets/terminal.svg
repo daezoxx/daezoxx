@@ -1,0 +1,105 @@
+<svg width="860" height="290" viewBox="0 0 860 290" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @keyframes blink {
+      0%,100% { opacity: 1; }
+      50%      { opacity: 0; }
+    }
+    @keyframes reveal1  { 0%,5%   { opacity:0 } 6%,100%  { opacity:1 } }
+    @keyframes reveal2  { 0%,15%  { opacity:0 } 16%,100% { opacity:1 } }
+    @keyframes reveal3  { 0%,25%  { opacity:0 } 26%,100% { opacity:1 } }
+    @keyframes reveal4  { 0%,35%  { opacity:0 } 36%,100% { opacity:1 } }
+    @keyframes reveal5  { 0%,45%  { opacity:0 } 46%,100% { opacity:1 } }
+    @keyframes reveal6  { 0%,55%  { opacity:0 } 56%,100% { opacity:1 } }
+    @keyframes reveal7  { 0%,65%  { opacity:0 } 66%,100% { opacity:1 } }
+    @keyframes sidePulse {
+      0%,100% { opacity:0.35; }
+      50%      { opacity:0.9; }
+    }
+    @keyframes scanlineMove {
+      0%   { transform: translateY(38px); opacity: 0.06; }
+      100% { transform: translateY(290px); opacity: 0.02; }
+    }
+    .cursor { animation: blink 1s step-end infinite; }
+    .l1 { animation: reveal1 12s ease infinite; }
+    .l2 { animation: reveal2 12s ease infinite; }
+    .l3 { animation: reveal3 12s ease infinite; }
+    .l4 { animation: reveal4 12s ease infinite; }
+    .l5 { animation: reveal5 12s ease infinite; }
+    .l6 { animation: reveal6 12s ease infinite; }
+    .l7 { animation: reveal7 12s ease infinite; }
+    .side { animation: sidePulse 2s ease-in-out infinite; }
+    .scanlines { animation: scanlineMove 2.2s linear infinite; }
+  </style>
+  <defs>
+    <linearGradient id="termBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#010e16"/>
+      <stop offset="100%" stop-color="#00080c"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Body -->
+  <rect width="860" height="290" rx="10" fill="url(#termBg)" stroke="#00f5ff" stroke-width="1" opacity="0.85"/>
+
+  <!-- Scanline sweep -->
+  <rect class="scanlines" x="0" y="0" width="860" height="40" fill="#00f5ff" rx="0"/>
+
+  <!-- Title bar -->
+  <rect x="0" y="0" width="860" height="34" rx="10" fill="#011822"/>
+  <rect x="0" y="24" width="860" height="10" fill="#011822"/>
+
+  <!-- Traffic lights -->
+  <circle cx="22" cy="17" r="6" fill="#ff5f57"/>
+  <circle cx="44" cy="17" r="6" fill="#febc2e"/>
+  <circle cx="66" cy="17" r="6" fill="#28c840"/>
+
+  <!-- Terminal title -->
+  <text x="430" y="22" text-anchor="middle" font-family="'Courier New',monospace"
+        font-size="10" fill="#00f5ff" letter-spacing="3" opacity="0.7">
+    ZAEX::COMPLIANCE-CONSOLE — v2.099 — UPLINK SECURE
+  </text>
+
+  <!-- Side accent bar -->
+  <rect class="side" x="0" y="34" width="3" height="256" fill="#00f5ff" rx="2"/>
+
+  <!-- Line 1: prompt -->
+  <text class="l1" x="22" y="68" font-family="'Courier New',monospace" font-size="12">
+    <tspan fill="#b400ff">zaex@solique</tspan><tspan fill="#445">:</tspan><tspan fill="#2ed573">~$</tspan><tspan fill="#00f5ff"> whoami</tspan>
+  </text>
+
+  <!-- Line 2 -->
+  <text class="l2" x="22" y="92" font-family="'Courier New',monospace" font-size="12" fill="#aaffee">
+    ▸  AI Engineer @ Solique · TaxTech &amp; Compliance Automation Systems
+  </text>
+
+  <!-- Line 3 -->
+  <text class="l3" x="22" y="114" font-family="'Courier New',monospace" font-size="12" fill="#aaffee">
+    ▸  LLM Orchestration · Hybrid Retrieval (BM25 + Vector) · RAG Pipelines
+  </text>
+
+  <!-- Line 4 -->
+  <text class="l4" x="22" y="136" font-family="'Courier New',monospace" font-size="12" fill="#aaffee">
+    ▸  Regulatory Decision Engines · Provenance Tracking · Audit Trails
+  </text>
+
+  <!-- Line 5 -->
+  <text class="l5" x="22" y="158" font-family="'Courier New',monospace" font-size="12" fill="#aaffee">
+    ▸  M.Sc Computer Games Technology — University of London
+  </text>
+
+  <!-- Line 6 -->
+  <text class="l6" x="22" y="180" font-family="'Courier New',monospace" font-size="12" fill="#aaffee">
+    ▸  300M+ game visits · Real-time systems · Gameplay engineering
+  </text>
+
+  <!-- Line 7: mission prompt -->
+  <text class="l7" x="22" y="216" font-family="'Courier New',monospace" font-size="12">
+    <tspan fill="#b400ff">zaex@solique</tspan><tspan fill="#445">:</tspan><tspan fill="#2ed573">~$</tspan><tspan fill="#00f5ff"> cat mission.txt</tspan>
+  </text>
+
+  <text class="l7" x="22" y="240" font-family="'Courier New',monospace" font-size="12" fill="#ffd700">
+    ██  "Turning regulatory chaos into structured, auditable intelligence."
+  </text>
+
+  <!-- Blinking cursor -->
+  <rect class="cursor" x="22" y="255" width="9" height="14" fill="#00f5ff" rx="1"/>
+</svg>

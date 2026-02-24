@@ -1,0 +1,114 @@
+<svg width="900" height="150" viewBox="0 0 900 150" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @keyframes pulse0 { 0%,100%{opacity:1;r:3} 50%{opacity:0.3;r:2} }
+    @keyframes pulse1 { 0%,100%{opacity:1} 50%{opacity:0.3} }
+    @keyframes pulse2 { 0%,100%{opacity:1} 50%{opacity:0.25} animation-delay:0.3s }
+    @keyframes pulse3 { 0%,100%{opacity:1} 50%{opacity:0.25} }
+    @keyframes pulse4 { 0%,100%{opacity:1} 50%{opacity:0.3} }
+    @keyframes pulse5 { 0%,100%{opacity:1} 50%{opacity:0.3} }
+    @keyframes flowPulse {
+      0%   { cx: 55;  opacity: 0.9; r: 4; }
+      16%  { cx: 200; opacity: 0.9; }
+      32%  { cx: 345; opacity: 0.9; }
+      48%  { cx: 490; opacity: 0.9; }
+      64%  { cx: 635; opacity: 0.9; }
+      80%  { cx: 790; opacity: 0.9; }
+      100% { cx: 870; opacity: 0; r: 2; }
+    }
+    @keyframes arrowBlink1 { 0%,100%{opacity:0.8} 50%{opacity:0.2} }
+    @keyframes arrowBlink2 { 0%,100%{opacity:0.8} 50%{opacity:0.2} animation-delay:.2s }
+    @keyframes arrowBlink3 { 0%,100%{opacity:0.8} 50%{opacity:0.2} animation-delay:.4s }
+    @keyframes arrowBlink4 { 0%,100%{opacity:0.8} 50%{opacity:0.2} animation-delay:.1s }
+    @keyframes arrowBlink5 { 0%,100%{opacity:0.8} 50%{opacity:0.2} animation-delay:.3s }
+    @keyframes titleGlow {
+      0%,100%{opacity:0.9} 50%{opacity:0.5}
+    }
+    .n1 { animation: pulse1 1.6s ease-in-out infinite; }
+    .n2 { animation: pulse2 1.8s ease-in-out infinite 0.3s; }
+    .n3 { animation: pulse3 2.0s ease-in-out infinite 0.1s; }
+    .n4 { animation: pulse4 1.7s ease-in-out infinite 0.4s; }
+    .n5 { animation: pulse5 1.9s ease-in-out infinite 0.2s; }
+    .n6 { animation: pulse1 2.1s ease-in-out infinite 0.5s; }
+    .flow { animation: flowPulse 4s ease-in-out infinite; }
+    .a1 { animation: arrowBlink1 1.6s ease-in-out infinite; }
+    .a2 { animation: arrowBlink2 1.8s ease-in-out infinite 0.2s; }
+    .a3 { animation: arrowBlink3 2.0s ease-in-out infinite 0.4s; }
+    .a4 { animation: arrowBlink4 1.7s ease-in-out infinite 0.1s; }
+    .a5 { animation: arrowBlink5 1.9s ease-in-out infinite 0.3s; }
+    .title { animation: titleGlow 3s ease-in-out infinite; }
+  </style>
+  <defs>
+    <linearGradient id="pipeBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#020010"/>
+      <stop offset="100%" stop-color="#040020"/>
+    </linearGradient>
+    <marker id="arr" markerWidth="7" markerHeight="7" refX="4" refY="3.5" orient="auto">
+      <polygon points="0,0 7,3.5 0,7" fill="#00f5ff" opacity="0.85"/>
+    </marker>
+    <marker id="arr2" markerWidth="7" markerHeight="7" refX="4" refY="3.5" orient="auto">
+      <polygon points="0,0 7,3.5 0,7" fill="#2ed573" opacity="0.85"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="150" rx="10" fill="url(#pipeBg)" stroke="#1a0040" stroke-width="1.5"/>
+
+  <text class="title" x="450" y="22" text-anchor="middle"
+        font-family="'Courier New',monospace" font-size="9" fill="#b400ff" letter-spacing="5">
+    ◈  COMPLIANCE INTELLIGENCE PIPELINE  ◈
+  </text>
+
+  <!-- Node 1: INGEST -->
+  <rect class="n1" x="10" y="38" width="108" height="58" rx="7" fill="#010e18" stroke="#00f5ff" stroke-width="1.5"/>
+  <text x="64" y="62" text-anchor="middle" font-family="'Courier New',monospace" font-size="9" fill="#00f5ff" letter-spacing="1">INGEST</text>
+  <text x="64" y="78" text-anchor="middle" font-family="'Courier New',monospace" font-size="7" fill="#336677">ETL · Streaming</text>
+  <text x="64" y="90" text-anchor="middle" font-family="'Courier New',monospace" font-size="6" fill="#224455">Bulk Index</text>
+
+  <line class="a1" x1="120" y1="67" x2="148" y2="67" stroke="#00f5ff" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Node 2: PARSE -->
+  <rect class="n2" x="150" y="38" width="108" height="58" rx="7" fill="#010e18" stroke="#00f5ff" stroke-width="1.5"/>
+  <text x="204" y="62" text-anchor="middle" font-family="'Courier New',monospace" font-size="9" fill="#00f5ff" letter-spacing="1">PARSE</text>
+  <text x="204" y="78" text-anchor="middle" font-family="'Courier New',monospace" font-size="7" fill="#336677">NLP · Structure</text>
+  <text x="204" y="90" text-anchor="middle" font-family="'Courier New',monospace" font-size="6" fill="#224455">Regulatory Extract</text>
+
+  <line class="a2" x1="260" y1="67" x2="288" y2="67" stroke="#00f5ff" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Node 3: RETRIEVE -->
+  <rect class="n3" x="290" y="38" width="118" height="58" rx="7" fill="#0e0018" stroke="#b400ff" stroke-width="1.5"/>
+  <text x="349" y="62" text-anchor="middle" font-family="'Courier New',monospace" font-size="9" fill="#b400ff" letter-spacing="1">RETRIEVE</text>
+  <text x="349" y="78" text-anchor="middle" font-family="'Courier New',monospace" font-size="7" fill="#663388">BM25 + Vector</text>
+  <text x="349" y="90" text-anchor="middle" font-family="'Courier New',monospace" font-size="6" fill="#442255">Hybrid Search</text>
+
+  <line class="a3" x1="410" y1="67" x2="438" y2="67" stroke="#b400ff" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Node 4: REASON -->
+  <rect class="n4" x="440" y="38" width="118" height="58" rx="7" fill="#0e0018" stroke="#b400ff" stroke-width="1.5"/>
+  <text x="499" y="62" text-anchor="middle" font-family="'Courier New',monospace" font-size="9" fill="#b400ff" letter-spacing="1">REASON</text>
+  <text x="499" y="78" text-anchor="middle" font-family="'Courier New',monospace" font-size="7" fill="#663388">LLM · RAG · Rerank</text>
+  <text x="499" y="90" text-anchor="middle" font-family="'Courier New',monospace" font-size="6" fill="#442255">Confidence Score</text>
+
+  <line class="a4" x1="560" y1="67" x2="588" y2="67" stroke="#ffd700" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Node 5: DECIDE -->
+  <rect class="n5" x="590" y="38" width="108" height="58" rx="7" fill="#0e0a00" stroke="#ffd700" stroke-width="1.5"/>
+  <text x="644" y="62" text-anchor="middle" font-family="'Courier New',monospace" font-size="9" fill="#ffd700" letter-spacing="1">DECIDE</text>
+  <text x="644" y="78" text-anchor="middle" font-family="'Courier New',monospace" font-size="7" fill="#665500">Risk · Classify</text>
+  <text x="644" y="90" text-anchor="middle" font-family="'Courier New',monospace" font-size="6" fill="#443300">Score · Flag</text>
+
+  <line class="a5" x1="700" y1="67" x2="728" y2="67" stroke="#2ed573" stroke-width="1.5" marker-end="url(#arr2)"/>
+
+  <!-- Node 6: AUDIT -->
+  <rect class="n6" x="730" y="38" width="158" height="58" rx="7" fill="#001408" stroke="#2ed573" stroke-width="1.5"/>
+  <text x="809" y="62" text-anchor="middle" font-family="'Courier New',monospace" font-size="9" fill="#2ed573" letter-spacing="1">AUDIT TRAIL</text>
+  <text x="809" y="78" text-anchor="middle" font-family="'Courier New',monospace" font-size="7" fill="#226633">Source Map · Provenance</text>
+  <text x="809" y="90" text-anchor="middle" font-family="'Courier New',monospace" font-size="6" fill="#144422">Timestamps · IDs</text>
+
+  <!-- Animated data pulse -->
+  <circle class="flow" cy="67" fill="#00f5ff"/>
+
+  <!-- Bottom label -->
+  <text x="450" y="130" text-anchor="middle" font-family="'Courier New',monospace"
+        font-size="8" fill="#2a3a4a" letter-spacing="3">
+    REGULATORY CORPUS  →  STRUCTURED INTELLIGENCE  →  AUDITABLE DECISION
+  </text>
+</svg>

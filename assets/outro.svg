@@ -1,0 +1,73 @@
+<svg width="900" height="110" viewBox="0 0 900 110" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @keyframes ringPulse1 {
+      0%,100% { r:65; opacity:0.18; }
+      50%      { r:72; opacity:0.06; }
+    }
+    @keyframes ringPulse2 {
+      0%,100% { r:42; opacity:0.25; }
+      50%      { r:48; opacity:0.1; }
+    }
+    @keyframes textGlow {
+      0%,100% { opacity:1; filter:drop-shadow(0 0 10px #00f5ff) drop-shadow(0 0 25px #00f5ff60); }
+      50%      { opacity:0.8; filter:drop-shadow(0 0 5px #b400ff) drop-shadow(0 0 15px #b400ff60); }
+    }
+    @keyframes subGlow {
+      0%,100% { opacity:0.75; }
+      50%      { opacity:0.4; }
+    }
+    @keyframes scanOut {
+      0%   { transform:translateY(0); opacity:0.5; }
+      100% { transform:translateY(112px); opacity:0; }
+    }
+    @keyframes borderPulse {
+      0%,100% { stroke-opacity: 0.6; }
+      50%      { stroke-opacity: 0.2; }
+    }
+    .r1 { animation: ringPulse1 3s ease-in-out infinite; }
+    .r2 { animation: ringPulse2 2.5s ease-in-out infinite; }
+    .main-text { animation: textGlow 2.5s ease-in-out infinite; }
+    .sub { animation: subGlow 3.5s ease-in-out infinite; }
+    .scan-out { animation: scanOut 3s linear infinite; }
+    .border { animation: borderPulse 2s ease-in-out infinite; }
+  </style>
+  <defs>
+    <linearGradient id="outroBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#020010"/>
+      <stop offset="100%" stop-color="#060028"/>
+    </linearGradient>
+    <linearGradient id="neonLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#00f5ff"/>
+      <stop offset="50%"  stop-color="#b400ff"/>
+      <stop offset="100%" stop-color="#00f5ff"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="110" rx="12" fill="url(#outroBg)"/>
+  <rect class="border" x="1" y="1" width="898" height="108" rx="12" fill="none"
+        stroke="url(#neonLine)" stroke-width="1.5"/>
+
+  <!-- Glow rings centered -->
+  <circle class="r1" cx="450" cy="55" fill="none" stroke="#00f5ff" stroke-width="1"/>
+  <circle class="r2" cx="450" cy="55" fill="none" stroke="#b400ff" stroke-width="1"/>
+
+  <!-- SYSTEM ONLINE text -->
+  <text class="main-text" x="450" y="46" text-anchor="middle"
+        font-family="'Courier New',monospace" font-size="20" font-weight="900"
+        fill="url(#neonLine)" letter-spacing="8">
+    SYSTEM ONLINE
+  </text>
+
+  <text class="sub" x="450" y="72" text-anchor="middle"
+        font-family="'Courier New',monospace" font-size="10" fill="#00f5ff" letter-spacing="3">
+    ◈  ZAEX NODE ACTIVE  ·  REGULATORY CORE LIVE  ·  ALL SYSTEMS GO  ◈
+  </text>
+
+  <text x="450" y="95" text-anchor="middle"
+        font-family="'Courier New',monospace" font-size="8" fill="#2a3355" letter-spacing="2">
+    "Turning regulatory chaos into structured intelligence, one pipeline at a time."
+  </text>
+
+  <!-- Scanline sweep out -->
+  <rect class="scan-out" x="0" y="0" width="900" height="2" fill="url(#neonLine)" opacity="0.5" rx="1"/>
+</svg>
