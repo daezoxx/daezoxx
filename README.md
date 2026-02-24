@@ -10,13 +10,13 @@
 </div>
 
 <p align="center">
-<strong>AI Engineer at Solique</strong> — building regulatory intelligence systems that turn unstructured compliance documents into auditable, structured decisions.<br/>
-I work across the full retrieval pipeline: ETL ingestion, hybrid search (BM25 + dense vector via Elasticsearch &amp; Qdrant), RAG orchestration, and LLM-powered decision engines with full provenance tracking.
+<strong>AI Engineer at AskSolique</strong>, building intelligent search and retrieval systems for regulatory compliance.<br/>
+I design hybrid search pipelines that combine BM25 sparse retrieval with dense vector search across Elasticsearch and Qdrant, backed by RAG orchestration, reranking, and LLM-powered reasoning to surface precise, auditable answers from unstructured regulatory data.
 </p>
 
 <p align="center">
-<em>M.Sc. Computer Games Technology — University of London</em><br/>
-Previously built game systems serving <strong>300M+ player visits</strong> on Roblox — real-time state management, ML-driven mechanics, and large-scale concurrent systems.
+<em>M.Sc. Computer Games Technology, University of London</em><br/>
+Previously built game systems serving <strong>300M+ player visits</strong> on Roblox. Real-time state management, ML-driven mechanics, and large-scale concurrent systems.
 </p>
 
 <p align="center"><em>"Turning regulatory chaos into structured, auditable intelligence."</em></p>
@@ -25,7 +25,7 @@ Previously built game systems serving <strong>300M+ player visits</strong> on Ro
 
 <div align="center">
 
-<img src="./assets/terminal.svg" alt="ZAEX Compliance Console — AI Engineer @ Solique, TaxTech & Compliance Automation, LLM Orchestration, Hybrid Retrieval (BM25 + Vector), RAG Pipelines, Regulatory Decision Engines, Provenance Tracking, Audit Trails, M.Sc Computer Games Technology, 300M+ game visits" width="860"/>
+<img src="./assets/terminal.svg" alt="ZAEX Compliance Console: AI Engineer @ AskSolique, TaxTech & Compliance Automation, LLM Orchestration, Hybrid Retrieval (BM25 + Vector), RAG Pipelines, Regulatory Decision Engines, Provenance Tracking, Audit Trails, M.Sc Computer Games Technology, 300M+ game visits" width="860"/>
 
 </div>
 
@@ -37,7 +37,7 @@ Previously built game systems serving <strong>300M+ player visits</strong> on Ro
 
 | ⚖️ Regulatory Intelligence | 🤖 AI Agent Systems | 🌍 Scale Background |
 |:---|:---|:---|
-| Hybrid retrieval + LLM reasoning for tax compliance at **Solique**. Full audit trail from document ingestion to decision output. | LLM orchestration with safety guardrails, governance controls, and structured output validation. | 300M+ visits across Roblox titles. Real-time multiplayer systems, economy balancing, ML-driven mechanics. |
+| Hybrid search (BM25 + dense vector), RAG pipelines, reranking, and LLM reasoning for tax compliance at **AskSolique**. Full audit trail from ingestion to decision. | LLM orchestration with safety guardrails, governance controls, and structured output validation. | 300M+ visits across Roblox titles. Real-time multiplayer systems, economy balancing, ML-driven mechanics. |
 | RAG · BM25 + Vector · Elasticsearch · Qdrant · PostgreSQL | Orchestration · Guardrails · Evaluation · Governance | Luau · Distributed State · Low-Latency Event Systems |
 | ![LIVE](https://img.shields.io/badge/LIVE-Production-2ed573?style=flat-square&labelColor=001408) | ![DEV](https://img.shields.io/badge/IN_DEV-Building-ffd700?style=flat-square&labelColor=0e0a00) | ![SHIPPED](https://img.shields.io/badge/SHIPPED-300M%2B_Visits-00f5ff?style=flat-square&labelColor=011020) |
 
