@@ -1,10 +1,6 @@
 <!-- ══════════════════════════════════════════════════════════ -->
 <!--   ZAEX — REGULATORY INTELLIGENCE ARCHITECT               -->
 <!--   GitHub Profile README — Production Grade               -->
-<!--   HOW TO USE:                                            -->
-<!--   1. Upload /assets/*.svg files to your repo root        -->
-<!--   2. Replace dhanu-nagarajan in stats URLs          -->
-<!--   3. Update LinkedIn URL                                 -->
 <!-- ══════════════════════════════════════════════════════════ -->
 
 <div align="center">
@@ -13,103 +9,81 @@
 
 </div>
 
-<br/>
+<p align="center">
+<strong>AI Engineer at Solique</strong> — building regulatory intelligence systems that turn unstructured compliance documents into auditable, structured decisions.<br/>
+I work across the full retrieval pipeline: ETL ingestion, hybrid search (BM25 + dense vector via Elasticsearch &amp; Qdrant), RAG orchestration, and LLM-powered decision engines with full provenance tracking.
+</p>
+
+<p align="center">
+<em>M.Sc. Computer Games Technology — University of London</em><br/>
+Previously built game systems serving <strong>300M+ player visits</strong> on Roblox — real-time state management, ML-driven mechanics, and large-scale concurrent systems.
+</p>
+
+<p align="center"><em>"Turning regulatory chaos into structured, auditable intelligence."</em></p>
+
+---
 
 <div align="center">
 
-<img src="./assets/terminal.svg" alt="ZAEX Terminal Bio" width="860"/>
+<img src="./assets/terminal.svg" alt="ZAEX Compliance Console — AI Engineer @ Solique, TaxTech & Compliance Automation, LLM Orchestration, Hybrid Retrieval (BM25 + Vector), RAG Pipelines, Regulatory Decision Engines, Provenance Tracking, Audit Trails, M.Sc Computer Games Technology, 300M+ game visits" width="860"/>
 
 </div>
 
-<br/>
+---
+
+## What I Build
+
+<div align="center">
+
+| ⚖️ Regulatory Intelligence | 🤖 AI Agent Systems | 🌍 Scale Background |
+|:---|:---|:---|
+| Hybrid retrieval + LLM reasoning for tax compliance at **Solique**. Full audit trail from document ingestion to decision output. | LLM orchestration with safety guardrails, governance controls, and structured output validation. | 300M+ visits across Roblox titles. Real-time multiplayer systems, economy balancing, ML-driven mechanics. |
+| RAG · BM25 + Vector · Elasticsearch · Qdrant · PostgreSQL | Orchestration · Guardrails · Evaluation · Governance | Luau · Distributed State · Low-Latency Event Systems |
+| ![LIVE](https://img.shields.io/badge/LIVE-Production-2ed573?style=flat-square&labelColor=001408) | ![DEV](https://img.shields.io/badge/IN_DEV-Building-ffd700?style=flat-square&labelColor=0e0a00) | ![SHIPPED](https://img.shields.io/badge/SHIPPED-300M%2B_Visits-00f5ff?style=flat-square&labelColor=011020) |
+
+</div>
 
 ---
 
 <div align="center">
 
-<img src="./assets/pipeline.svg" alt="Compliance Intelligence Pipeline" width="900"/>
+<img src="./assets/pipeline.svg" alt="Compliance Intelligence Pipeline: INGEST (ETL, Streaming, Bulk Index) → PARSE (NLP, Structure, Regulatory Extract) → RETRIEVE (BM25 + Vector Hybrid Search) → REASON (LLM, RAG, Rerank, Confidence Score) → DECIDE (Risk, Classify, Score, Flag) → AUDIT TRAIL (Source Map, Provenance, Timestamps, IDs)" width="900"/>
 
 </div>
 
-<br/>
-
 ---
 
-## ⚡ Tech Stack
+## Tech Stack
 
 <div align="center">
 
-<!-- Row 1 -->
 ![Python](https://img.shields.io/badge/Python-020010?style=for-the-badge&logo=python&logoColor=00f5ff&labelColor=011020&color=00f5ff)
 ![Elasticsearch](https://img.shields.io/badge/Elasticsearch-020010?style=for-the-badge&logo=elasticsearch&logoColor=ffd700&labelColor=0e0a00&color=ffd700)
-![Qdrant](https://img.shields.io/badge/Qdrant-020010?style=for-the-badge&logo=databricks&logoColor=b400ff&labelColor=0e0018&color=b400ff)
+![Qdrant](https://img.shields.io/badge/Qdrant-020010?style=for-the-badge&logo=qdrant&logoColor=b400ff&labelColor=0e0018&color=b400ff)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-020010?style=for-the-badge&logo=postgresql&logoColor=2ed573&labelColor=001408&color=2ed573)
+![RAG](https://img.shields.io/badge/RAG-020010?style=for-the-badge&logo=huggingface&logoColor=00f5ff&labelColor=011020&color=00f5ff)
+![Hybrid Search](https://img.shields.io/badge/Hybrid_Search-020010?style=for-the-badge&logo=algolia&logoColor=b400ff&labelColor=0e0018&color=b400ff)
+![ETL](https://img.shields.io/badge/ETL-020010?style=for-the-badge&logo=apacheairflow&logoColor=ffd700&labelColor=0e0a00&color=ffd700)
+![Embeddings](https://img.shields.io/badge/Embeddings-020010?style=for-the-badge&logo=huggingface&logoColor=2ed573&labelColor=001408&color=2ed573)
 ![LLM Orchestration](https://img.shields.io/badge/LLM_Orchestration-020010?style=for-the-badge&logo=openai&logoColor=ff6b9d&labelColor=140010&color=ff6b9d)
-![RAG](https://img.shields.io/badge/RAG_Pipelines-020010?style=for-the-badge&logo=amazonaws&logoColor=00f5ff&labelColor=011020&color=00f5ff)
-
-<!-- Row 2 -->
-![BM25](https://img.shields.io/badge/BM25_Hybrid_Search-020010?style=for-the-badge&logo=algolia&logoColor=b400ff&labelColor=0e0018&color=b400ff)
-![ETL](https://img.shields.io/badge/ETL_Pipelines-020010?style=for-the-badge&logo=apacheairflow&logoColor=ffd700&labelColor=0e0a00&color=ffd700)
-![Embeddings](https://img.shields.io/badge/Vector_Embeddings-020010?style=for-the-badge&logo=huggingface&logoColor=2ed573&labelColor=001408&color=2ed573)
-![Observability](https://img.shields.io/badge/Observability-020010?style=for-the-badge&logo=grafana&logoColor=ff6b9d&labelColor=140010&color=ff6b9d)
-![Governance](https://img.shields.io/badge/LLM_Governance-020010?style=for-the-badge&logo=shield&logoColor=00f5ff&labelColor=011020&color=00f5ff)
-![Game Engine](https://img.shields.io/badge/Game_Engine-020010?style=for-the-badge&logo=roblox&logoColor=ffd700&labelColor=0e0a00&color=ffd700)
 
 </div>
 
-<br/>
-
 ---
 
-## 📡 Telemetry Feed
+## GitHub Activity
 
 <div align="center">
 
 [![GitHub Stats](https://github-readme-stats.vercel.app/api?username=dhanu-nagarajan&show_icons=true&theme=radical&bg_color=020010&border_color=00f5ff&title_color=00f5ff&text_color=aaffee&icon_color=b400ff&ring_color=b400ff)](https://github.com/dhanu-nagarajan)
 &nbsp;&nbsp;
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=dhanu-nagarajan&layout=compact&bg_color=020010&border_color=b400ff&title_color=b400ff&text_color=aaffee)](https://github.com/dhanu-nagarajan)
-
-<br/>
-
 [![Streak](https://streak-stats.demolab.com?user=dhanu-nagarajan&theme=radical&background=020010&border=00f5ff&stroke=b400ff&ring=00f5ff&fire=ffd700&currStreakLabel=00f5ff&sideLabels=b400ff&dates=aaffee)](https://github.com/dhanu-nagarajan)
 
-<br/>
-
-[![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=dhanu-nagarajan&bg_color=020010&color=00f5ff&line=b400ff&point=ffd700&area=true&hide_border=false&border_color=00f5ff)](https://github.com/dhanu-nagarajan)
-
 </div>
-
-<br/>
 
 ---
 
-<div align="center">
-
-<img src="./assets/skills.svg" alt="Skill Power Matrix" width="860"/>
-
-</div>
-
-<br/>
-
----
-
-## 🚀 Active Systems
-
-<div align="center">
-
-| ⚖️ TaxTech Engine | 🤖 AI Agents | 🌍 Virtual Worlds |
-|:---:|:---:|:---:|
-| Regulatory Intelligence @ Solique | LLM Workflow Automation | 300M+ Visits — Roblox |
-| RAG · BM25 · Vector · Audit Trails | Orchestration · Safety · Governance | Real-time Systems · ML Mechanics |
-| ![LIVE](https://img.shields.io/badge/PRODUCTION-ACTIVE-2ed573?style=flat-square&labelColor=001408) | ![DEV](https://img.shields.io/badge/STATUS-IN_DEV-ffd700?style=flat-square&labelColor=0e0a00) | ![DEPLOYED](https://img.shields.io/badge/300M%2B-DEPLOYED-00f5ff?style=flat-square&labelColor=011020) |
-
-</div>
-
-<br/>
-
----
-
-## 🔗 Uplink Channels
+## Connect
 
 <div align="center">
 
@@ -118,16 +92,6 @@
 [![Website](https://img.shields.io/badge/WEBSITE-progamedev.pro-b400ff?style=for-the-badge&logo=firefoxbrowser&logoColor=b400ff&labelColor=0e0018)](https://progamedev.pro/)
 &nbsp;
 [![LinkedIn](https://img.shields.io/badge/LINKEDIN-Connect-0a66c2?style=for-the-badge&logo=linkedin&logoColor=00f5ff&labelColor=011020)](https://linkedin.com/in/progamedev)
-
-</div>
-
-<br/>
-
----
-
-<div align="center">
-
-<img src="./assets/outro.svg" alt="System Online — ZAEX Node Active" width="900"/>
 
 </div>
 
@@ -141,12 +105,10 @@
   └── assets/
       ├── banner.svg     ← animated ZAEX hologram header
       ├── terminal.svg   ← animated compliance console bio
-      ├── pipeline.svg   ← animated data flow diagram
-      ├── skills.svg     ← animated skill bars
-      └── outro.svg      ← system online outro
+      └── pipeline.svg   ← animated data flow diagram
 
   REPLACE THESE PLACEHOLDERS:
-  • dhanu-nagarajan  → your actual GitHub handle (x4 spots)
+  • dhanu-nagarajan  → your actual GitHub handle (x2 spots)
   • progamedev         → your LinkedIn URL slug
 
   ALL SVG ANIMATIONS WORK BECAUSE:
