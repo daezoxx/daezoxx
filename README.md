@@ -76,13 +76,7 @@ Previously built game systems serving <strong>300M+ player visits</strong> on Ro
 <div align="center">
 
 <a href="https://github.com/dhanu-nagarajan">
-  <img src="https://github-readme-stats.vercel.app/api?username=dhanu-nagarajan&show_icons=true&theme=radical&bg_color=020010&border_color=00f5ff&title_color=00f5ff&text_color=aaffee&icon_color=b400ff&ring_color=b400ff" alt="GitHub Stats"/>
-</a>
-
-<br/>
-
-<a href="https://github.com/dhanu-nagarajan">
-  <img src="https://streak-stats.demolab.com?user=dhanu-nagarajan&theme=radical&background=020010&border=00f5ff&stroke=b400ff&ring=00f5ff&fire=ffd700&currStreakLabel=00f5ff&sideLabels=b400ff&dates=aaffee" alt="GitHub Streak"/>
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=dhanu-nagarajan&bg_color=020010&color=00f5ff&line=b400ff&point=ffd700&area=true&hide_border=false&border_color=00f5ff" alt="Commit Activity Graph" width="900"/>
 </a>
 
 </div>
