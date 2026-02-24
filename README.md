@@ -75,11 +75,7 @@ Previously built game systems serving <strong>300M+ player visits</strong> on Ro
 
 <div align="center">
 
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=dhanu-nagarajan&theme=radical" alt="Contribution Graph" width="900"/>
-<br/>
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=dhanu-nagarajan&theme=radical" alt="GitHub Stats"/>
-&nbsp;
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=dhanu-nagarajan&theme=radical&utcOffset=0" alt="Commit Activity by Hour"/>
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=dhanu-nagarajan&bg_color=020010&color=00f5ff&line=b400ff&point=ffd700&area=true&hide_border=false&border_color=00f5ff" alt="Commit Activity Graph" width="900"/>
 <br/>
 <img src="https://streak-stats.demolab.com?user=dhanu-nagarajan&theme=radical&background=020010&border=00f5ff&stroke=b400ff&ring=00f5ff&fire=ffd700&currStreakLabel=00f5ff&sideLabels=b400ff&dates=aaffee" alt="GitHub Streak"/>
 
