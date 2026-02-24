@@ -130,8 +130,8 @@
   </text>
 
   <!-- Status dots -->
-  <circle class="dot" cx="200" cy="172" r="3" fill="#00f5ff" style="animation-delay:0s"/>
-  <circle class="dot" cx="700" cy="172" r="3" fill="#b400ff" style="animation-delay:0.7s"/>
+  <circle class="dot" cx="80" cy="172" r="3" fill="#00f5ff" style="animation-delay:0s"/>
+  <circle class="dot" cx="820" cy="172" r="3" fill="#b400ff" style="animation-delay:0.7s"/>
 
   <!-- Scan line -->
   <rect class="scan" x="0" y="-4" width="900" height="3" fill="#00f5ff" opacity="0.4" rx="2"/>
