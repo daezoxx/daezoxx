@@ -87,9 +87,9 @@ Previously built game systems serving <strong>300M+ player visits</strong> on Ro
 
 <div align="center">
 
-[![Email](https://img.shields.io/badge/EMAIL-cto%40progamedev.pro-00f5ff?style=for-the-badge&logo=gmail&logoColor=00f5ff&labelColor=011020)](mailto:cto@progamedev.pro)
+[![Email](https://img.shields.io/badge/EMAIL-dhanu%40dhanu.dev-00f5ff?style=for-the-badge&logo=gmail&logoColor=00f5ff&labelColor=011020)](mailto:dhanu@dhanu.dev)
 &nbsp;
-[![Website](https://img.shields.io/badge/WEBSITE-progamedev.pro-b400ff?style=for-the-badge&logo=firefoxbrowser&logoColor=b400ff&labelColor=0e0018)](https://progamedev.pro/)
+[![Website](https://img.shields.io/badge/WEBSITE-dhanu.dev-b400ff?style=for-the-badge&logo=firefoxbrowser&logoColor=b400ff&labelColor=0e0018)](https://dhanu.dev/)
 &nbsp;
 [![LinkedIn](https://img.shields.io/badge/LINKEDIN-Connect-0a66c2?style=for-the-badge&logo=linkedin&logoColor=00f5ff&labelColor=011020)](https://linkedin.com/in/progamedev)
 
