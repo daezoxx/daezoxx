@@ -36,9 +36,11 @@ jobs:
 
       - name: Generate streak card
         # Composite action: installs PHP and renders the SVG on the runner.
-        # Pinned to a release tag rather than @main so an upstream change
-        # cannot silently alter the card. Bump deliberately.
-        uses: DenverCoder1/github-readme-streak-stats@v1.7.0
+        # Pinned by commit SHA, not @main or @v1.7.0 — a git tag is mutable
+        # and this job holds contents: write, so a re-pointed tag would run
+        # unreviewed third-party code against this repository. Bump the SHA
+        # deliberately when upgrading.
+        uses: DenverCoder1/github-readme-streak-stats@51cfb8879073b4c016ce6286016de0b14d179077 # v1.7.0
         with:
           path: assets/streak.svg
           # GITHUB_TOKEN covers public contribution data. To include private
