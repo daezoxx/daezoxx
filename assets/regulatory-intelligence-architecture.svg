@@ -14,8 +14,10 @@
 
     .flow { stroke-dasharray: 6 6; animation: flowDown 1.1s linear infinite; }
 
+    /* A 6px dash pattern is negligible amplitude, so it slows rather
+       than stops. */
     @media (prefers-reduced-motion: reduce) {
-      .flow { animation: none; stroke-dasharray: none; }
+      .flow { animation-duration: 3.3s; }
     }
   </style>
 

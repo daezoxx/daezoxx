@@ -20,8 +20,11 @@
     .far    { animation: drift 90s linear infinite; }
     .near   { animation: drift 46s linear infinite; }
 
+    /* Parallax and the full-width sweep are the genuine vestibular
+       offenders, so they stop. The corner and status pulses are opacity
+       only and keep running. */
     @media (prefers-reduced-motion: reduce) {
-      .scan, .corner, .live, .far, .near { animation: none; }
+      .scan, .far, .near { animation: none; }
       .scan { opacity: 0; }
     }
   </style>

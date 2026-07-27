@@ -9,7 +9,8 @@
 
     @keyframes glow { 0%, 100% { opacity: .9; } 50% { opacity: .45; } }
     .pip { animation: glow 4.5s ease-in-out infinite; }
-    @media (prefers-reduced-motion: reduce) { .pip { animation: none; } }
+    /* Opacity-only pulse, safe to keep. */
+    @media (prefers-reduced-motion: reduce) { .pip { animation-duration: 9s; } }
   </style>
 
   <defs>
