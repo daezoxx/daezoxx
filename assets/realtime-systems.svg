@@ -34,10 +34,16 @@
     .tr2 { animation: march 4s linear infinite; animation-delay: -3.38s; }
     .tr3 { animation: march 4s linear infinite; animation-delay: -3.44s; }
 
+    /* Reduced motion still has to teach. Rather than parking both lanes at
+       the origin, freeze them mid-run: the snapped square sits on tick 5,
+       the interpolated square exactly one tick behind it. The comparison
+       survives with no movement at all. */
     @media (prefers-reduced-motion: reduce) {
       .snap, .head, .tr1, .tr2, .tr3,
       .t0, .t1, .t2, .t3, .t4, .t5, .t6, .t7 { animation: none; }
       .trail { display: none; }
+      .snap { transform: translateX(390px); }
+      .head { transform: translateX(292.5px); }
       .t0, .t1, .t2, .t3, .t4, .t5, .t6, .t7 { opacity: .7; }
     }
   </style>
