@@ -1,0 +1,64 @@
+name: Streak Stats
+
+# Renders the contribution streak card *inside the runner* and commits the SVG
+# to this repository. The README then loads a local asset instead of calling a
+# public rendering service at page-view time, which is what made the previous
+# card unreliable: the hosted endpoint answers in 10-17s, far beyond the
+# timeout GitHub's image proxy (camo) allows before it caches a failure.
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Daily, off the hour to avoid the cron congestion GitHub sees at :00.
+    - cron: "17 3 * * *"
+  push:
+    paths:
+      - .github/workflows/streak-stats.yml
+
+# Read-only by default; the single job that needs to push widens it.
+permissions:
+  contents: read
+
+concurrency:
+  group: streak-stats
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    name: Generate and commit streak card
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Generate streak card
+        # Composite action: installs PHP and renders the SVG on the runner.
+        # Pinned to a release tag rather than @main so an upstream change
+        # cannot silently alter the card. Bump deliberately.
+        uses: DenverCoder1/github-readme-streak-stats@v1.7.0
+        with:
+          path: assets/streak.svg
+          # GITHUB_TOKEN covers public contribution data. To include private
+          # contributions, create a PAT with read:user, store it as a secret,
+          # and swap this for ${{ secrets.STREAK_TOKEN }}.
+          token: ${{ secrets.GITHUB_TOKEN }}
+          # Query string must stay on one line: YAML folding would inject
+          # spaces into the parameter values. Colours match the profile
+          # design system; animations are disabled so the card is static.
+          options: "user=${{ github.repository_owner }}&type=svg&hide_border=true&border_radius=10&background=0B1020&stroke=1E2A44&ring=22D3EE&fire=F0B429&currStreakNum=E6EDF3&currStreakLabel=22D3EE&sideNums=E6EDF3&sideLabels=8FA3BF&dates=8FA3BF&excludeDaysLabel=8FA3BF&disable_animations=true"
+
+      - name: Commit card when it changed
+        run: |
+          set -euo pipefail
+          if [ -z "$(git status --porcelain -- assets/streak.svg)" ]; then
+            echo "Streak card is unchanged. Nothing to commit."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/streak.svg
+          git commit -m "chore(assets): refresh contribution streak card"
+          git push

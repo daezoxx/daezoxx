@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="352" viewBox="0 0 900 352" role="img" aria-label="Regulatory retrieval failure modes mapped to engineering controls.">
+  <title>Failure Modes and Engineering Controls</title>
+
+  <style>
+    .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
+    .idx  { font-size: 9.5px; fill: #5A6B85; letter-spacing: .8px; }
+    .fail { font-size: 11.5px; fill: #E6EDF3; }
+    .ctrl { font-size: 11.5px; fill: #E6EDF3; }
+
+    @keyframes glow { 0%, 100% { opacity: .9; } 50% { opacity: .45; } }
+    .pip { animation: glow 4.5s ease-in-out infinite; }
+    @media (prefers-reduced-motion: reduce) { .pip { animation: none; } }
+  </style>
+
+  <defs>
+    <marker id="map" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+      <path d="M0 0.5 6 3.5 0 6.5Z" fill="#34D399"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="352" rx="12" fill="#080B16"/>
+  <rect x=".75" y=".75" width="898.5" height="350.5" rx="12" fill="none" stroke="#1E2A44" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <text class="mono" x="32" y="30" font-size="12" letter-spacing="3.2" fill="#22D3EE">FAILURE MODES · ENGINEERING CONTROLS</text>
+  <text class="mono" x="868" y="30" font-size="10" letter-spacing="1.6" fill="#8FA3BF" text-anchor="end">REGULATORY RETRIEVAL</text>
+  <path d="M32 44H868" stroke="#1E2A44"/>
+
+  <!-- Column headers -->
+  <text class="mono" x="58"  y="70" font-size="9.5" letter-spacing="2.4" fill="#F0B429">WHAT GOES WRONG</text>
+  <text class="mono" x="470" y="70" font-size="9.5" letter-spacing="2.4" fill="#34D399">WHAT PREVENTS IT</text>
+
+  <!-- Rows -->
+  <g>
+    <text class="mono idx"  x="30"  y="102">01</text>
+    <text class="mono fail" x="58"  y="102">Superseded rule retrieved as current</text>
+    <path class="pip" d="M438 98h9" stroke="#34D399" stroke-width="1.3" marker-end="url(#map)"/>
+    <text class="mono ctrl" x="470" y="102">Effective-date and version-aware filtering</text>
+    <path d="M30 116H870" stroke="#1E2A44" stroke-opacity=".7"/>
+
+    <text class="mono idx"  x="30"  y="142">02</text>
+    <text class="mono fail" x="58"  y="142">Conflicting authorities ranked equally</text>
+    <path class="pip" d="M438 138h9" stroke="#34D399" stroke-width="1.3" marker-end="url(#map)"/>
+    <text class="mono ctrl" x="470" y="142">Source-authority weighting during fusion</text>
+    <path d="M30 156H870" stroke="#1E2A44" stroke-opacity=".7"/>
+
+    <text class="mono idx"  x="30"  y="182">03</text>
+    <text class="mono fail" x="58"  y="182">Citation does not support the claim</text>
+    <path class="pip" d="M438 178h9" stroke="#34D399" stroke-width="1.3" marker-end="url(#map)"/>
+    <text class="mono ctrl" x="470" y="182">Span-level grounding verification</text>
+    <path d="M30 196H870" stroke="#1E2A44" stroke-opacity=".7"/>
+
+    <text class="mono idx"  x="30"  y="222">04</text>
+    <text class="mono fail" x="58"  y="222">High confidence on thin evidence</text>
+    <path class="pip" d="M438 218h9" stroke="#34D399" stroke-width="1.3" marker-end="url(#map)"/>
+    <text class="mono ctrl" x="470" y="222">Coverage-aware scoring and abstention</text>
+    <path d="M30 236H870" stroke="#1E2A44" stroke-opacity=".7"/>
+
+    <text class="mono idx"  x="30"  y="262">05</text>
+    <text class="mono fail" x="58"  y="262">Prose output breaks downstream systems</text>
+    <path class="pip" d="M438 258h9" stroke="#34D399" stroke-width="1.3" marker-end="url(#map)"/>
+    <text class="mono ctrl" x="470" y="262">Schema-validated structured output</text>
+    <path d="M30 276H870" stroke="#1E2A44" stroke-opacity=".7"/>
+
+    <text class="mono idx"  x="30"  y="302">06</text>
+    <text class="mono fail" x="58"  y="302">Silent regression after a config change</text>
+    <path class="pip" d="M438 298h9" stroke="#34D399" stroke-width="1.3" marker-end="url(#map)"/>
+    <text class="mono ctrl" x="470" y="302">Offline evaluation gates before deploy</text>
+  </g>
+
+  <path d="M32 322H868" stroke="#1E2A44"/>
+  <text class="mono" x="450" y="341" font-size="10.5" letter-spacing="1.2" fill="#8FA3BF" text-anchor="middle">An answer is only as good as the evidence it can show and the ranking it can justify.</text>
+</svg>
