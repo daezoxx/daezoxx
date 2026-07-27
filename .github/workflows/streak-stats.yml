@@ -36,7 +36,7 @@ jobs:
 
       - name: Generate streak card
         # Composite action: installs PHP and renders the SVG on the runner.
-        # Pinned by commit SHA, not @main or @v1.7.0 — a git tag is mutable
+        # Pinned by commit SHA, not @main or @v1.7.0, because a git tag is mutable
         # and this job holds contents: write, so a re-pointed tag would run
         # unreviewed third-party code against this repository. Bump the SHA
         # deliberately when upgrading.

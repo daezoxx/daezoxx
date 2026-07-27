@@ -75,12 +75,12 @@
   <g>
     <rect x="24" y="200" width="419" height="66" rx="7" fill="#0B1020" stroke="#A78BFA" stroke-opacity=".55"/>
     <text class="mono t" x="38" y="223" fill="#A78BFA">SPARSE INDEX</text>
-    <text class="mono d" x="38" y="241">BM25 lexical matching · Elasticsearch</text>
+    <text class="mono d" x="38" y="241">BM25 lexical matching · OpenSearch</text>
     <text class="mono d" x="38" y="256">Statute numbers, defined terms, exact phrases</text>
 
     <rect x="457" y="200" width="419" height="66" rx="7" fill="#0B1020" stroke="#A78BFA" stroke-opacity=".55"/>
     <text class="mono t" x="471" y="223" fill="#A78BFA">DENSE INDEX</text>
-    <text class="mono d" x="471" y="241">Embedding pipeline · Qdrant</text>
+    <text class="mono d" x="471" y="241">Embeddings · kNN vector search</text>
     <text class="mono d" x="471" y="256">Paraphrase and concept-level recall</text>
   </g>
 
@@ -102,7 +102,7 @@
 
     <rect x="458" y="324" width="199" height="66" rx="7" fill="#0B1020" stroke="#A78BFA" stroke-opacity=".55"/>
     <text class="mono t" x="472" y="347" fill="#A78BFA">FUSION</text>
-    <text class="mono d" x="472" y="365">Rank merge · Dedup</text>
+    <text class="mono d" x="472" y="365">Reciprocal rank fusion</text>
     <text class="mono d" x="472" y="380">Authority weighting</text>
 
     <rect x="675" y="324" width="199" height="66" rx="7" fill="#0B1020" stroke="#A78BFA" stroke-opacity=".55"/>
