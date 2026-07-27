@@ -7,10 +7,16 @@
     .d  { font-size: 10.5px; fill: #8FA3BF; }
     .bl { font-size: 9.5px; letter-spacing: 2.4px; fill: #8FA3BF; }
 
-    @keyframes drift { 0%, 100% { opacity: .55; } 50% { opacity: 1; } }
-    .flow { animation: drift 5s ease-in-out infinite; }
+    /* Dashes travel along the stage connectors so the diagram reads as a
+       pipeline with a direction, not a stack of boxes. The dash pattern is
+       6+6, so one period of 12 loops seamlessly. */
+    @keyframes flowDown { from { stroke-dashoffset: 12; } to { stroke-dashoffset: 0; } }
 
-    @media (prefers-reduced-motion: reduce) { .flow { animation: none; opacity: .9; } }
+    .flow { stroke-dasharray: 6 6; animation: flowDown 1.1s linear infinite; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .flow { animation: none; stroke-dasharray: none; }
+    }
   </style>
 
   <defs>
