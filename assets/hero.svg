@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="240" viewBox="0 0 900 240" role="img" aria-label="ZAEX — AI Systems Engineer, Regulatory Intelligence. Hybrid retrieval and grounded reasoning for high-stakes compliance decisions.">
-  <title>ZAEX — AI Systems Engineer, Regulatory Intelligence</title>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="240" viewBox="0 0 900 240" role="img" aria-label="ZAEX. AI Systems Engineer, Regulatory Intelligence. Tax and compliance answers that survive an audit.">
+  <title>ZAEX. AI Systems Engineer, Regulatory Intelligence</title>
 
   <style>
     .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
@@ -63,7 +63,7 @@
   <!-- Identity -->
   <text class="sans" x="48" y="92" font-size="62" font-weight="700" letter-spacing="13" fill="url(#wordmark)">ZAEX</text>
   <text class="mono" x="51" y="120" font-size="12" letter-spacing="4.4" fill="#22D3EE">AI SYSTEMS ENGINEER · REGULATORY INTELLIGENCE</text>
-  <text class="sans" x="50" y="147" font-size="13.5" fill="#8FA3BF">Hybrid retrieval and grounded reasoning for high-stakes compliance decisions.</text>
+  <text class="sans" x="50" y="147" font-size="13.5" fill="#8FA3BF">Tax and compliance answers that survive an audit.</text>
 
   <!-- Role chip -->
   <rect x="650" y="46" width="218" height="30" rx="6" fill="#0F1526" stroke="#22D3EE" stroke-opacity=".45"/>
@@ -76,7 +76,7 @@
   <!-- Signal strip -->
   <g class="mono">
     <text x="48"  y="192" font-size="9.5" letter-spacing="2" fill="#8FA3BF">RETRIEVAL</text>
-    <text x="48"  y="211" font-size="11.5" fill="#E6EDF3">BM25 + dense hybrid</text>
+    <text x="48"  y="211" font-size="11.5" fill="#E6EDF3">BM25 + kNN, RRF fused</text>
 
     <text x="250" y="192" font-size="9.5" letter-spacing="2" fill="#8FA3BF">GROUNDING</text>
     <text x="250" y="211" font-size="11.5" fill="#E6EDF3">Span-level citations</text>

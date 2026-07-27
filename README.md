@@ -1,20 +1,26 @@
 <div align="center">
 
-<img src="./assets/hero.svg" alt="ZAEX — AI Systems Engineer, Regulatory Intelligence. Hybrid retrieval and grounded reasoning for high-stakes compliance decisions. AI Engineer at AskSolique. Retrieval: BM25 plus dense hybrid. Grounding: span-level citations. Output: schema-validated. Background: 300M+ player-visit systems." />
+<img src="./assets/hero.svg" alt="ZAEX. AI Systems Engineer, Regulatory Intelligence. Tax and compliance answers that survive an audit. AI Engineer at AskSolique. Retrieval: BM25 plus kNN, RRF fused. Grounding: span-level citations. Output: schema-validated. Background: 300M+ player-visit systems." />
 
 </div>
 
-I build search and reasoning systems for regulatory work — the kind where an answer is worthless unless you can show which source it came from, which version of that source was in force, and why it outranked the alternatives.
+Ask a tax question. Get an answer with a citation. Sounds simple.
 
-Currently **AI Engineer at AskSolique**, working on retrieval and reasoning for tax and compliance.
+Now make it true for Indian tax law, where the statute was amended in 2017, three benches disagree, and the circular that settles it landed last March.
+
+That is the problem I work on.
+
+**AI Engineer at AskSolique.**
 
 ---
 
-## Current work
+## What I actually build
 
-Regulatory corpora are fragmented, versioned, jurisdiction-bound, and routinely self-contradictory. The hard part is not generation — it is everything around it: deciding what evidence reaches the model, proving it was the right evidence, and recording the decision so it survives review months later.
+Most AI answers are confident. Very few are checkable.
 
-My work sits across the whole path: ingestion and normalization, chunking and metadata strategy, sparse and dense indexing, query understanding, hybrid retrieval and fusion, reranking, grounded reasoning, structured decisions, and the provenance record that ties the answer back to its sources.
+I build the part that makes them checkable. Retrieval that knows a Supreme Court judgment outranks a practitioner's note. Fusion that knows the amendment replaced the rule it amended. A citation guard that reads the finished answer, finds the claim, and blocks it when the cited source does not actually say that.
+
+The model is the easy part. The evidence is the whole job.
 
 ---
 
@@ -22,26 +28,31 @@ My work sits across the whole path: ingestion and normalization, chunking and me
 
 <div align="center">
 
-<img src="./assets/regulatory-intelligence-architecture.svg" alt="Regulatory intelligence lifecycle. Stage 1, Acquire: sources (statutes, rulings, guidance, filings) flow into ingestion (connectors, scheduling, change detection), then parse and normalize (sections, tables, citations, references), then regulatory metadata (jurisdiction, authority, effective dates, version). Stage 2, Index: chunking and metadata strategy applied before write, feeding a sparse index (BM25 lexical matching on Elasticsearch for statute numbers, defined terms and exact phrases) and a dense index (embedding pipeline on Qdrant for paraphrase and concept-level recall). Stage 3, Retrieve: query understanding (intent, expansion, jurisdiction and date scope), then hybrid retrieval (sparse and dense in parallel with metadata pre-filtering), then fusion (rank merge, dedup, authority weighting), then rerank (cross-encoder and LLM, precision at low k). Stage 4, Reason and decide: grounded reasoning (RAG over ranked evidence, citation-bound generation), then structured decision (classification, risk scoring, confidence and abstention), then provenance record (span-level citations, versions, trace id, immutable audit log). Offline evaluation feeds back into retrieval, fusion and rerank tuning. Stage 5, across every stage: evaluation, observability, guardrails, versioning, confidence, human review." />
+<img src="./assets/regulatory-intelligence-architecture.svg" alt="Regulatory intelligence lifecycle. Stage 1, Acquire: sources (statutes, rulings, guidance, filings) flow into ingestion (connectors, scheduling, change detection), then parse and normalize (sections, tables, citations, references), then regulatory metadata (jurisdiction, authority, effective dates, version). Stage 2, Index: chunking and metadata strategy applied before write, feeding a sparse index (BM25 lexical matching on OpenSearch for statute numbers, defined terms and exact phrases) and a dense index (embeddings and kNN vector search for paraphrase and concept-level recall). Stage 3, Retrieve: query understanding (intent, expansion, jurisdiction and date scope), then hybrid retrieval (sparse and dense in parallel with metadata pre-filtering), then fusion (reciprocal rank fusion, dedup, authority weighting), then rerank (cross-encoder and LLM, precision at low k). Stage 4, Reason and decide: grounded reasoning (RAG over ranked evidence, citation-bound generation), then structured decision (classification, risk scoring, confidence and abstention), then provenance record (span-level citations, versions, trace id, immutable audit log). Offline evaluation feeds back into retrieval, fusion and rerank tuning. Stage 5, across every stage: evaluation, observability, guardrails, versioning, confidence, human review." />
 
 </div>
 
-`sources → ingestion → parse & normalize → regulatory metadata → sparse + dense indexes → query understanding → hybrid retrieval → fusion → rerank → grounded reasoning → structured decision → provenance record`
+`sources → ingestion → parse & normalize → regulatory metadata → sparse + dense indexes → query understanding → hybrid retrieval → RRF fusion → rerank → grounded reasoning → structured decision → provenance record`
 
 ---
 
-## Why regulatory retrieval is not generic semantic search
+## Why this is not just semantic search
 
-- **Authority is ranked, not flat.** A statute, a binding ruling, and an explanatory note are not interchangeable evidence, and fusion has to know the difference.
-- **Time is a filter, not a field.** "What is the rule" is an incomplete question without "as at when".
-- **Versions supersede.** Retrieving the right document at the wrong revision is still a wrong answer.
-- **Conflict is the normal case.** Sources disagree. The system should surface the disagreement, not quietly average it away.
-- **Citations bind to spans.** A document-level reference is a pointer, not evidence.
-- **Abstention beats a confident guess.** Where retrieval coverage is thin, saying so is the correct output.
+**Not all sources are equal.** A Supreme Court judgment and a practitioner's note are both text. Only one of them ends an argument.
+
+**"What is the rule" is an incomplete question.** The complete one ends with "as at when".
+
+**Right document, wrong version, still wrong.** Amendments supersede. Retrieval has to know the date, not just the topic.
+
+**Sources disagree, and that is normal.** Averaging two conflicting authorities gives you an answer that is true nowhere. Surface the conflict instead.
+
+**A citation is not a link.** It is a span of text that contains the claim. Anything looser is decoration.
+
+**Sometimes the right answer is "not enough evidence".** Thin retrieval should lower confidence, not raise word count.
 
 ---
 
-## Failure modes and the controls that prevent them
+## Failure modes and the controls that stop them
 
 <div align="center">
 
@@ -51,19 +62,19 @@ My work sits across the whole path: ingestion and normalization, chunking and me
 
 ---
 
-## Engineering principles
+## How I work
 
-**Retrieval before generation.** Most problems blamed on the model are evidence problems.
+**Retrieval before generation.** When the answer is wrong, the evidence was usually wrong first.
 
-**Evidence before confidence.** A score is meaningless without the passages standing behind it.
+**Evidence before confidence.** A score with no passages behind it is a guess with better formatting.
 
-**Evaluation before deployment.** Retrieval changes ship behind offline gates, not intuition.
+**Evaluation before deployment.** Blind the judge, run the set, compare, then ship.
 
-**Structure over prose.** Typed, validated output wherever another system consumes the result.
+**Structure over prose.** If a machine reads it next, hand it a schema, not a paragraph.
 
-**Provenance by default.** Every answer carries its sources, their versions, and a trace id.
+**Provenance by default.** Sources, versions, trace id. Every answer, every time.
 
-**Human review where consequences are material.** Automation should escalate, not quietly decide.
+**Escalate, do not decide.** When the stakes are real, the system's job is to put evidence in front of a human.
 
 ---
 
@@ -71,19 +82,20 @@ My work sits across the whole path: ingestion and normalization, chunking and me
 
 | Domain | Detail |
 | :--- | :--- |
-| **Retrieval** | BM25 · dense vectors · hybrid fusion · query expansion · metadata filtering · cross-encoder and LLM reranking |
-| **Reasoning** | RAG orchestration · structured generation · tool execution · confidence scoring · output validation |
-| **Data** | Regulatory parsing · ETL · chunking and metadata strategy · lineage · PostgreSQL · Elasticsearch · Qdrant |
-| **Reliability** | Retrieval evaluation · guardrails · provenance · audit trails · observability · governance |
+| **Retrieval** | BM25 · kNN vector search · reciprocal rank fusion · query expansion · metadata and date filtering · cross-encoder and LLM reranking |
+| **Reasoning** | RAG orchestration · multi-agent deliberation · planner and researcher agents · structured generation · tool calling · citation guards |
+| **Data** | Regulatory parsing · ETL · chunking and metadata strategy · lineage · PostgreSQL · OpenSearch |
+| **Reliability** | Blinded LLM evaluation harnesses · guardrails · provenance · audit trails · distributed tracing · PII redaction |
+| **Delivery** | Python · FastAPI · SSE streaming · async pipelines · Docker |
 | **Scale** | Real-time systems · concurrent state · event-driven architecture · low-latency engineering · Luau |
 
 <div align="center">
 
 ![Python](https://img.shields.io/badge/Python-22D3EE?style=flat-square&logo=python&logoColor=22D3EE&labelColor=0B1020)
 &nbsp;
-![Elasticsearch](https://img.shields.io/badge/Elasticsearch-A78BFA?style=flat-square&logo=elasticsearch&logoColor=A78BFA&labelColor=0B1020)
+![FastAPI](https://img.shields.io/badge/FastAPI-A78BFA?style=flat-square&logo=fastapi&logoColor=A78BFA&labelColor=0B1020)
 &nbsp;
-![Qdrant](https://img.shields.io/badge/Qdrant-F0B429?style=flat-square&logo=qdrant&logoColor=F0B429&labelColor=0B1020)
+![OpenSearch](https://img.shields.io/badge/OpenSearch-F0B429?style=flat-square&logo=opensearch&logoColor=F0B429&labelColor=0B1020)
 &nbsp;
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-34D399?style=flat-square&logo=postgresql&logoColor=34D399&labelColor=0B1020)
 &nbsp;
@@ -93,23 +105,25 @@ My work sits across the whole path: ingestion and normalization, chunking and me
 
 ---
 
-## Where the scale instinct came from
+## Where the instinct came from
 
-Before compliance systems, I built game systems on Roblox used across experiences with more than **300 million player visits** — real-time multiplayer state, distributed event handling, economy design and balancing, and ML-driven mechanics running under hard latency budgets.
+Before tax law, I built games.
 
-That turned out to be good preparation for this. Both jobs are correctness under load with nowhere to hand-wave: a desynced game state and an unsupported compliance answer are the same class of failure — a system that looked fine right up until somebody checked.
+Roblox systems across experiences with more than **300 million player visits**. Real-time multiplayer state. Distributed events. Economies that break the instant one number is wrong.
+
+People assume that was a different career. It was the same one. A desynced game state and an unsupported tax answer fail in exactly the same way: quietly, confidently, and only in front of the person who checks.
 
 **M.Sc. Computer Games Technology**, University of London.
 
 ---
 
-## Current focus
+## What I am working on now
 
-- Retrieval evaluation harnesses that catch regressions before they reach production
-- Reranking that respects source authority and recency, not just semantic similarity
-- Calibrated confidence and principled abstention
-- Provenance that stays intact through multi-step reasoning
-- Safety boundaries for agentic tool use inside regulated workflows
+- Evaluation harnesses that catch a retrieval regression before it reaches anyone
+- Reranking that weighs authority and recency, not just similarity
+- Confidence that means something, and abstention that triggers when it should
+- Provenance that survives multi-step reasoning instead of dissolving in it
+- Safety boundaries for agents that call tools inside regulated workflows
 
 ---
 
