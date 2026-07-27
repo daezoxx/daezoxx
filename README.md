@@ -105,15 +105,25 @@ The model is the easy part. The evidence is the whole job.
 
 ---
 
-## Where the instinct came from
+## Games
 
-Before tax law, I built games.
+I build games. That is not a line on a timeline, it is the thing that taught me systems.
 
-Roblox systems across experiences with more than **300 million player visits**. Real-time multiplayer state. Distributed events. Economies that break the instant one number is wrong.
+Roblox experiences with more than **300 million player visits**. Authoritative servers. Real-time multiplayer state. Distributed events. Economies that break the instant one number is wrong.
 
-People assume that was a different career. It was the same one. A desynced game state and an unsupported tax answer fail in exactly the same way: quietly, confidently, and only in front of the person who checks.
+Here is the problem every multiplayer game has to solve. The server sends state a few times a second. Move a character to each position as it arrives and the motion is unwatchable. So you hold a buffer, interpolate between the positions, and accept that you are always rendering slightly in the past.
 
-**M.Sc. Computer Games Technology**, University of London.
+<div align="center">
+
+<img src="./assets/realtime-systems.svg" alt="Animated netcode diagram. A fixed-timestep server tick strip pulses across the top. The middle lane shows an entity snapping between the eight discrete positions the server sent. The bottom lane shows the same entity interpolated into continuous motion, trailing the raw snapshots by exactly one tick. Caption: one tick of buffer buys smooth motion, choosing what to trade is the job. Concepts: authoritative server, client prediction, lag compensation, deterministic state, event ordering." />
+
+</div>
+
+The gold square is the truth. The green square is a lie, one tick stale, and it is the one players want. Every real-time system is a negotiation like that.
+
+None of this stopped being useful. A desynced game state and an unsupported tax answer fail in exactly the same way: quietly, confidently, and only in front of the person who checks.
+
+**M.Sc. Computer Games Technology**, University of London. Luau, real-time state, ML-driven mechanics, economy design.
 
 ---
 
