@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="240" viewBox="0 0 900 240" role="img" aria-label="ZAEX — AI Systems Engineer, Regulatory Intelligence. Hybrid retrieval and grounded reasoning for high-stakes compliance decisions.">
+  <title>ZAEX — AI Systems Engineer, Regulatory Intelligence</title>
+
+  <style>
+    .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
+    .sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+
+    /* Motion is decorative only. Every element is fully legible at rest. */
+    @keyframes sweep   { from { transform: translateY(0); }   to { transform: translateY(240px); } }
+    @keyframes breathe { 0%, 100% { opacity: .85; } 50% { opacity: .45; } }
+    @keyframes signal  { 0%, 100% { opacity: 1; }   50% { opacity: .35; } }
+
+    .scan   { animation: sweep 14s linear infinite; }
+    .corner { animation: breathe 6s ease-in-out infinite; }
+    .live   { animation: signal 3.4s ease-in-out infinite; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .scan, .corner, .live { animation: none; }
+      .scan { opacity: 0; }
+    }
+  </style>
+
+  <defs>
+    <linearGradient id="heroBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070A14"/>
+      <stop offset="55%" stop-color="#0B1020"/>
+      <stop offset="100%" stop-color="#0D1226"/>
+    </linearGradient>
+    <linearGradient id="wordmark" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22D3EE"/>
+      <stop offset="62%" stop-color="#8FB8F0"/>
+      <stop offset="100%" stop-color="#A78BFA"/>
+    </linearGradient>
+    <linearGradient id="scanFade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22D3EE" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#22D3EE" stop-opacity=".5"/>
+      <stop offset="100%" stop-color="#22D3EE" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="heroClip"><rect width="900" height="240" rx="12"/></clipPath>
+  </defs>
+
+  <rect width="900" height="240" rx="12" fill="url(#heroBg)"/>
+
+  <g clip-path="url(#heroClip)">
+    <!-- Structural grid: implies an instrument panel without adding noise -->
+    <g stroke="#22D3EE" stroke-width="1" opacity=".05">
+      <path d="M150 0V240M300 0V240M450 0V240M600 0V240M750 0V240"/>
+      <path d="M0 60H900M0 120H900M0 180H900"/>
+    </g>
+    <rect class="scan" x="0" y="-2" width="900" height="2" fill="url(#scanFade)"/>
+  </g>
+
+  <rect x=".75" y=".75" width="898.5" height="238.5" rx="12" fill="none" stroke="#1E2A44" stroke-width="1.5"/>
+
+  <!-- Corner brackets -->
+  <g class="corner" stroke="#22D3EE" stroke-width="1.5" fill="none" opacity=".85" stroke-linecap="square">
+    <path d="M20 40V20h20"/>
+    <path d="M880 40V20h-20"/>
+    <path d="M20 200v20h20"/>
+    <path d="M880 200v20h-20"/>
+  </g>
+
+  <!-- Identity -->
+  <text class="sans" x="48" y="92" font-size="62" font-weight="700" letter-spacing="13" fill="url(#wordmark)">ZAEX</text>
+  <text class="mono" x="51" y="120" font-size="12" letter-spacing="4.4" fill="#22D3EE">AI SYSTEMS ENGINEER · REGULATORY INTELLIGENCE</text>
+  <text class="sans" x="50" y="147" font-size="13.5" fill="#8FA3BF">Hybrid retrieval and grounded reasoning for high-stakes compliance decisions.</text>
+
+  <!-- Role chip -->
+  <rect x="650" y="46" width="218" height="30" rx="6" fill="#0F1526" stroke="#22D3EE" stroke-opacity=".45"/>
+  <circle class="live" cx="668" cy="61" r="3.5" fill="#34D399"/>
+  <text class="mono" x="682" y="65" font-size="10.5" letter-spacing="1.1" fill="#E6EDF3">AI ENGINEER · ASKSOLIQUE</text>
+
+  <!-- Divider -->
+  <path d="M48 168H852" stroke="#1E2A44" stroke-width="1"/>
+
+  <!-- Signal strip -->
+  <g class="mono">
+    <text x="48"  y="192" font-size="9.5" letter-spacing="2" fill="#8FA3BF">RETRIEVAL</text>
+    <text x="48"  y="211" font-size="11.5" fill="#E6EDF3">BM25 + dense hybrid</text>
+
+    <text x="250" y="192" font-size="9.5" letter-spacing="2" fill="#8FA3BF">GROUNDING</text>
+    <text x="250" y="211" font-size="11.5" fill="#E6EDF3">Span-level citations</text>
+
+    <text x="452" y="192" font-size="9.5" letter-spacing="2" fill="#8FA3BF">OUTPUT</text>
+    <text x="452" y="211" font-size="11.5" fill="#E6EDF3">Schema-validated</text>
+
+    <text x="654" y="192" font-size="9.5" letter-spacing="2" fill="#8FA3BF">BACKGROUND</text>
+    <text x="654" y="211" font-size="11.5" fill="#E6EDF3">300M+ visit systems</text>
+  </g>
+
+  <!-- Accent ticks anchor each signal column -->
+  <g fill="#22D3EE" opacity=".75">
+    <rect x="40" y="182" width="2" height="12" rx="1"/>
+    <rect x="242" y="182" width="2" height="12" rx="1" fill="#A78BFA"/>
+    <rect x="444" y="182" width="2" height="12" rx="1" fill="#F0B429"/>
+    <rect x="646" y="182" width="2" height="12" rx="1" fill="#34D399"/>
+  </g>
+</svg>
