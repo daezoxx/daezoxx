@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="380" viewBox="0 0 900 380" role="img" aria-label="Animated netcode diagram comparing raw server snapshots with client-side interpolation.">
+  <title>Real-time systems: snapshot interpolation</title>
+
+  <style>
+    .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
+    .bl   { font-size: 9.5px; letter-spacing: 2.4px; fill: #8FA3BF; }
+    .cap  { font-size: 10.5px; fill: #8FA3BF; }
+
+    /* Both lanes run the SAME keyframe at the SAME rate. Only the timing
+       function differs: steps(8) shows the 8 positions the server actually
+       sent, linear reconstructs the motion between them. The interpolated
+       lane is delayed by exactly one tick (0.5s), which is the buffer it
+       costs. Anything else would misrepresent the trade. */
+    @keyframes march  { from { transform: translateX(0); } to { transform: translateX(780px); } }
+    @keyframes tickOn { 0%, 92% { opacity: .28; }          96%, 100% { opacity: 1; } }
+
+    /* Delays are expressed negatively (lag - 4s) so every element starts
+       mid-motion. A positive delay would park the trail at the origin for
+       the first two thirds of a second on load. */
+    .snap   { animation: march 4s steps(8, end) infinite; }
+    .head   { animation: march 4s linear infinite; animation-delay: -3.5s; }
+
+    .t0 { animation: tickOn 4s linear infinite; animation-delay: 0s; }
+    .t1 { animation: tickOn 4s linear infinite; animation-delay: .5s; }
+    .t2 { animation: tickOn 4s linear infinite; animation-delay: 1s; }
+    .t3 { animation: tickOn 4s linear infinite; animation-delay: 1.5s; }
+    .t4 { animation: tickOn 4s linear infinite; animation-delay: 2s; }
+    .t5 { animation: tickOn 4s linear infinite; animation-delay: 2.5s; }
+    .t6 { animation: tickOn 4s linear infinite; animation-delay: 3s; }
+    .t7 { animation: tickOn 4s linear infinite; animation-delay: 3.5s; }
+
+    /* Trail segments sit further behind the head to read as motion blur. */
+    .tr1 { animation: march 4s linear infinite; animation-delay: -3.32s; }
+    .tr2 { animation: march 4s linear infinite; animation-delay: -3.38s; }
+    .tr3 { animation: march 4s linear infinite; animation-delay: -3.44s; }
+
+    /* The preference is "reduce", not "remove". This motion is the content
+       of the diagram, and a 20px square crossing a contained graphic is not
+       what triggers vestibular symptoms; full-bleed parallax is, and that
+       stays switched off in the hero.
+
+       Duration and delay are scaled by the same factor (3x), which cuts the
+       speed to a third while preserving the exact one-tick phase offset.
+       The tick strobe stops entirely, since repeated flashing is the part
+       of this that genuinely warrants removal. */
+    @media (prefers-reduced-motion: reduce) {
+      .snap { animation-duration: 12s; }
+      .head { animation-duration: 12s; animation-delay: -10.5s; }
+      .tr1  { animation-duration: 12s; animation-delay: -9.96s; }
+      .tr2  { animation-duration: 12s; animation-delay: -10.14s; }
+      .tr3  { animation-duration: 12s; animation-delay: -10.32s; }
+      .t0, .t1, .t2, .t3, .t4, .t5, .t6, .t7 { animation: none; opacity: .7; }
+    }
+  </style>
+
+  <defs>
+    <linearGradient id="rtGlow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#22D3EE" stop-opacity=".22"/>
+      <stop offset="100%" stop-color="#22D3EE" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="380" rx="12" fill="#080B16"/>
+  <rect x=".75" y=".75" width="898.5" height="378.5" rx="12" fill="none" stroke="#1E2A44" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <text class="mono" x="32" y="30" font-size="12" letter-spacing="3.2" fill="#22D3EE">REAL-TIME SYSTEMS</text>
+  <text class="mono" x="868" y="30" font-size="10" letter-spacing="1.6" fill="#8FA3BF" text-anchor="end">GAME ENGINEERING</text>
+  <path d="M32 44H868" stroke="#1E2A44"/>
+
+  <!-- 01 · SERVER TICK -->
+  <text class="mono bl" x="32" y="74">01 · SERVER TICK · FIXED TIMESTEP</text>
+  <path d="M60 100H800" stroke="#1E2A44" stroke-width="1.5"/>
+  <g fill="#22D3EE">
+    <rect class="t0" x="58.5"  y="92" width="3" height="16" rx="1.5"/>
+    <rect class="t1" x="156"   y="92" width="3" height="16" rx="1.5"/>
+    <rect class="t2" x="253.5" y="92" width="3" height="16" rx="1.5"/>
+    <rect class="t3" x="351"   y="92" width="3" height="16" rx="1.5"/>
+    <rect class="t4" x="448.5" y="92" width="3" height="16" rx="1.5"/>
+    <rect class="t5" x="546"   y="92" width="3" height="16" rx="1.5"/>
+    <rect class="t6" x="643.5" y="92" width="3" height="16" rx="1.5"/>
+    <rect class="t7" x="741"   y="92" width="3" height="16" rx="1.5"/>
+  </g>
+  <text class="mono cap" x="820" y="104">tick</text>
+
+  <!-- 02 · RAW SNAPSHOTS -->
+  <text class="mono bl" x="32" y="150">02 · STATE AS THE SERVER SENDS IT</text>
+  <path d="M60 178H800" stroke="#1E2A44" stroke-width="1.5"/>
+  <g fill="#F0B429" opacity=".26">
+    <circle cx="60"    cy="178" r="3"/>
+    <circle cx="157.5" cy="178" r="3"/>
+    <circle cx="255"   cy="178" r="3"/>
+    <circle cx="352.5" cy="178" r="3"/>
+    <circle cx="450"   cy="178" r="3"/>
+    <circle cx="547.5" cy="178" r="3"/>
+    <circle cx="645"   cy="178" r="3"/>
+    <circle cx="742.5" cy="178" r="3"/>
+  </g>
+  <g class="snap">
+    <rect x="50" y="168" width="20" height="20" rx="5" fill="#F0B429"/>
+  </g>
+  <text class="mono cap" x="820" y="182">snaps</text>
+
+  <!-- 03 · INTERPOLATED -->
+  <text class="mono bl" x="32" y="226">03 · THE SAME STATE, INTERPOLATED</text>
+  <path d="M60 254H800" stroke="#1E2A44" stroke-width="1.5"/>
+  <g class="trail" fill="#34D399">
+    <g class="tr1"><rect x="52" y="246" width="16" height="16" rx="4" opacity=".14"/></g>
+    <g class="tr2"><rect x="52" y="246" width="16" height="16" rx="4" opacity=".22"/></g>
+    <g class="tr3"><rect x="52" y="246" width="16" height="16" rx="4" opacity=".34"/></g>
+  </g>
+  <g class="head">
+    <rect x="50" y="244" width="20" height="20" rx="5" fill="#34D399"/>
+    <rect x="50" y="244" width="20" height="20" rx="5" fill="url(#rtGlow)"/>
+  </g>
+  <text class="mono cap" x="820" y="258">smooth</text>
+
+  <!-- The point -->
+  <path d="M32 288H868" stroke="#1E2A44"/>
+  <text class="mono" x="32" y="312" font-size="11.5" fill="#E6EDF3">One tick of buffer buys smooth motion. Choosing what to trade is the job.</text>
+
+  <!-- Concept rail -->
+  <g class="mono" font-size="10.5" letter-spacing="1.1">
+    <circle cx="40"  cy="345" r="3" fill="#22D3EE"/>
+    <text x="51"  y="349" fill="#8FA3BF">Authoritative server</text>
+    <circle cx="222" cy="345" r="3" fill="#A78BFA"/>
+    <text x="233" y="349" fill="#8FA3BF">Client prediction</text>
+    <circle cx="382" cy="345" r="3" fill="#F0B429"/>
+    <text x="393" y="349" fill="#8FA3BF">Lag compensation</text>
+    <circle cx="558" cy="345" r="3" fill="#34D399"/>
+    <text x="569" y="349" fill="#8FA3BF">Deterministic state</text>
+    <circle cx="740" cy="345" r="3" fill="#22D3EE"/>
+    <text x="751" y="349" fill="#8FA3BF">Event ordering</text>
+  </g>
+</svg>

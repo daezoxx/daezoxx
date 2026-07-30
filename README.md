@@ -1,121 +1,164 @@
-<!-- ══════════════════════════════════════════════════════════ -->
-<!--   ZAEX — REGULATORY INTELLIGENCE ARCHITECT               -->
-<!--   GitHub Profile README — Production Grade               -->
-<!-- ══════════════════════════════════════════════════════════ -->
-
 <div align="center">
 
-<img src="./assets/banner.svg" alt="ZAEX — AI Systems Engineer · TaxTech Intelligence · Worldbuilder" width="900"/>
+<img src="./assets/hero.svg" alt="ZAEX. AI Systems Engineer, Regulatory Intelligence. Tax and compliance answers that survive an audit. AI Engineer at AskSolique. Retrieval: BM25 plus kNN, RRF fused. Grounding: span-level citations. Output: schema-validated. Background: 300M+ player-visit systems." />
 
 </div>
 
-<p align="center">
-<strong>AI Engineer at AskSolique</strong>, building intelligent search and retrieval systems for regulatory compliance.<br/>
-I design hybrid search pipelines that combine BM25 sparse retrieval with dense vector search across Elasticsearch and Qdrant, backed by RAG orchestration, reranking, and LLM-powered reasoning to surface precise, auditable answers from unstructured regulatory data.
-</p>
+Ask a tax question. Get an answer with a citation. Sounds simple.
 
-<p align="center">
-<em>M.Sc. Computer Games Technology, University of London</em><br/>
-Previously built game systems serving <strong>300M+ player visits</strong> on Roblox. Real-time state management, ML-driven mechanics, and large-scale concurrent systems.
-</p>
+Now make it true for Indian tax law, where the statute was amended in 2017, three benches disagree, and the circular that settles it landed last March.
 
-<p align="center"><em>"Turning regulatory chaos into structured, auditable intelligence."</em></p>
+That is the problem I work on.
+
+**AI Engineer at AskSolique.**
 
 ---
 
+## What I actually build
+
+Most AI answers are confident. Very few are checkable.
+
+I build the part that makes them checkable. Retrieval that knows a Supreme Court judgment outranks a practitioner's note. Fusion that knows the amendment replaced the rule it amended. A citation guard that reads the finished answer, finds the claim, and blocks it when the cited source does not actually say that.
+
+The model is the easy part. The evidence is the whole job.
+
+---
+
+## System architecture
+
 <div align="center">
 
-<img src="./assets/terminal.svg" alt="ZAEX Compliance Console: AI Engineer @ AskSolique, TaxTech & Compliance Automation, LLM Orchestration, Hybrid Retrieval (BM25 + Vector), RAG Pipelines, Regulatory Decision Engines, Provenance Tracking, Audit Trails, M.Sc Computer Games Technology, 300M+ game visits" width="860"/>
+<img src="./assets/regulatory-intelligence-architecture.svg" alt="Regulatory intelligence lifecycle. Stage 1, Acquire: sources (statutes, rulings, guidance, filings) flow into ingestion (connectors, scheduling, change detection), then parse and normalize (sections, tables, citations, references), then regulatory metadata (jurisdiction, authority, effective dates, version). Stage 2, Index: chunking and metadata strategy applied before write, feeding a sparse index (BM25 lexical matching on OpenSearch for statute numbers, defined terms and exact phrases) and a dense index (embeddings and kNN vector search for paraphrase and concept-level recall). Stage 3, Retrieve: query understanding (intent, expansion, jurisdiction and date scope), then hybrid retrieval (sparse and dense in parallel with metadata pre-filtering), then fusion (reciprocal rank fusion, dedup, authority weighting), then rerank (cross-encoder and LLM, precision at low k). Stage 4, Reason and decide: grounded reasoning (RAG over ranked evidence, citation-bound generation), then structured decision (classification, risk scoring, confidence and abstention), then provenance record (span-level citations, versions, trace id, immutable audit log). Offline evaluation feeds back into retrieval, fusion and rerank tuning. Stage 5, across every stage: evaluation, observability, guardrails, versioning, confidence, human review." />
 
 </div>
 
----
-
-## What I Build
-
-<div align="center">
-
-| ⚖️ Regulatory Intelligence | 🤖 AI Agent Systems | 🌍 Scale Background |
-|:---|:---|:---|
-| Hybrid search (BM25 + dense vector), RAG pipelines, reranking, and LLM reasoning for tax compliance at **AskSolique**. Full audit trail from ingestion to decision. | LLM orchestration with safety guardrails, governance controls, and structured output validation. | 300M+ visits across Roblox titles. Real-time multiplayer systems, economy balancing, ML-driven mechanics. |
-| RAG · BM25 + Vector · Elasticsearch · Qdrant · PostgreSQL | Orchestration · Guardrails · Evaluation · Governance | Luau · Distributed State · Low-Latency Event Systems |
-| ![LIVE](https://img.shields.io/badge/LIVE-Production-2ed573?style=flat-square&labelColor=001408) | ![DEV](https://img.shields.io/badge/IN_DEV-Building-ffd700?style=flat-square&labelColor=0e0a00) | ![SHIPPED](https://img.shields.io/badge/SHIPPED-300M%2B_Visits-00f5ff?style=flat-square&labelColor=011020) |
-
-</div>
+`sources → ingestion → parse & normalize → regulatory metadata → sparse + dense indexes → query understanding → hybrid retrieval → RRF fusion → rerank → grounded reasoning → structured decision → provenance record`
 
 ---
 
-<div align="center">
+## Why this is not just semantic search
 
-<img src="./assets/pipeline.svg" alt="Compliance Intelligence Pipeline: INGEST (ETL, Streaming, Bulk Index) → PARSE (NLP, Structure, Regulatory Extract) → RETRIEVE (BM25 + Vector Hybrid Search) → REASON (LLM, RAG, Rerank, Confidence Score) → DECIDE (Risk, Classify, Score, Flag) → AUDIT TRAIL (Source Map, Provenance, Timestamps, IDs)" width="900"/>
+**Not all sources are equal.** A Supreme Court judgment and a practitioner's note are both text. Only one of them ends an argument.
 
-</div>
+**"What is the rule" is an incomplete question.** The complete one ends with "as at when".
+
+**Right document, wrong version, still wrong.** Amendments supersede. Retrieval has to know the date, not just the topic.
+
+**Sources disagree, and that is normal.** Averaging two conflicting authorities gives you an answer that is true nowhere. Surface the conflict instead.
+
+**A citation is not a link.** It is a span of text that contains the claim. Anything looser is decoration.
+
+**Sometimes the right answer is "not enough evidence".** Thin retrieval should lower confidence, not raise word count.
 
 ---
 
-## Tech Stack
+## Failure modes and the controls that stop them
 
 <div align="center">
 
-![Python](https://img.shields.io/badge/Python-020010?style=for-the-badge&logo=python&logoColor=00f5ff&labelColor=011020&color=00f5ff)
-![Elasticsearch](https://img.shields.io/badge/Elasticsearch-020010?style=for-the-badge&logo=elasticsearch&logoColor=ffd700&labelColor=0e0a00&color=ffd700)
-![Qdrant](https://img.shields.io/badge/Qdrant-020010?style=for-the-badge&logo=qdrant&logoColor=b400ff&labelColor=0e0018&color=b400ff)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-020010?style=for-the-badge&logo=postgresql&logoColor=2ed573&labelColor=001408&color=2ed573)
-![RAG](https://img.shields.io/badge/RAG-020010?style=for-the-badge&logo=huggingface&logoColor=00f5ff&labelColor=011020&color=00f5ff)
-![Hybrid Search](https://img.shields.io/badge/Hybrid_Search-020010?style=for-the-badge&logo=algolia&logoColor=b400ff&labelColor=0e0018&color=b400ff)
-![ETL](https://img.shields.io/badge/ETL-020010?style=for-the-badge&logo=apacheairflow&logoColor=ffd700&labelColor=0e0a00&color=ffd700)
-![Embeddings](https://img.shields.io/badge/Embeddings-020010?style=for-the-badge&logo=huggingface&logoColor=2ed573&labelColor=001408&color=2ed573)
-![LLM Orchestration](https://img.shields.io/badge/LLM_Orchestration-020010?style=for-the-badge&logo=openai&logoColor=ff6b9d&labelColor=140010&color=ff6b9d)
+<img src="./assets/engineering-console.svg" alt="Regulatory retrieval failure modes mapped to engineering controls. Superseded rule retrieved as current is prevented by effective-date and version-aware filtering. Conflicting authorities ranked equally is prevented by source-authority weighting during fusion. Citation does not support the claim is prevented by span-level grounding verification. High confidence on thin evidence is prevented by coverage-aware scoring and abstention. Prose output breaking downstream systems is prevented by schema-validated structured output. Silent regression after a config change is prevented by offline evaluation gates before deploy." />
 
 </div>
 
 ---
 
-## GitHub Activity
+## How I work
 
-<div align="center">
+**Retrieval before generation.** When the answer is wrong, the evidence was usually wrong first.
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=daezoxx&bg_color=020010&color=00f5ff&line=b400ff&point=ffd700&area=true&hide_border=false&border_color=00f5ff" alt="Commit Activity Graph" width="900"/>
-<br/>
-<img src="https://streak-stats.demolab.com?user=daezoxx&theme=radical&background=020010&border=00f5ff&stroke=b400ff&ring=00f5ff&fire=ffd700&currStreakLabel=00f5ff&sideLabels=b400ff&dates=aaffee" alt="GitHub Streak"/>
+**Evidence before confidence.** A score with no passages behind it is a guess with better formatting.
 
-</div>
+**Evaluation before deployment.** Blind the judge, run the set, compare, then ship.
+
+**Structure over prose.** If a machine reads it next, hand it a schema, not a paragraph.
+
+**Provenance by default.** Sources, versions, trace id. Every answer, every time.
+
+**Escalate, do not decide.** When the stakes are real, the system's job is to put evidence in front of a human.
 
 ---
 
-## Connect
+## Capabilities
+
+| Domain | Detail |
+| :--- | :--- |
+| **Retrieval** | BM25 · kNN vector search · reciprocal rank fusion · query expansion · metadata and date filtering · cross-encoder and LLM reranking |
+| **Reasoning** | RAG orchestration · multi-agent deliberation · planner and researcher agents · structured generation · tool calling · citation guards |
+| **Data** | Regulatory parsing · ETL · chunking and metadata strategy · lineage · PostgreSQL · OpenSearch |
+| **Reliability** | Blinded LLM evaluation harnesses · guardrails · provenance · audit trails · distributed tracing · PII redaction |
+| **Delivery** | Python · FastAPI · SSE streaming · async pipelines · Docker |
+| **Scale** | Real-time systems · concurrent state · event-driven architecture · low-latency engineering · Luau |
 
 <div align="center">
 
-[![Email](https://img.shields.io/badge/EMAIL-dhanu%40dhanu.dev-00f5ff?style=for-the-badge&logo=gmail&logoColor=00f5ff&labelColor=011020)](mailto:dhanu@dhanu.dev)
+![Python](https://img.shields.io/badge/Python-22D3EE?style=flat-square&logo=python&logoColor=22D3EE&labelColor=0B1020)
 &nbsp;
-[![Website](https://img.shields.io/badge/WEBSITE-dhanu.dev-b400ff?style=for-the-badge&logo=firefoxbrowser&logoColor=b400ff&labelColor=0e0018)](https://dhanu.dev/)
+![FastAPI](https://img.shields.io/badge/FastAPI-A78BFA?style=flat-square&logo=fastapi&logoColor=A78BFA&labelColor=0B1020)
 &nbsp;
-[![LinkedIn](https://img.shields.io/badge/LINKEDIN-Connect-0a66c2?style=for-the-badge&logo=linkedin&logoColor=00f5ff&labelColor=011020)](https://linkedin.com/in/progamedev)
+![OpenSearch](https://img.shields.io/badge/OpenSearch-F0B429?style=flat-square&logo=opensearch&logoColor=F0B429&labelColor=0B1020)
+&nbsp;
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-34D399?style=flat-square&logo=postgresql&logoColor=34D399&labelColor=0B1020)
+&nbsp;
+![Docker](https://img.shields.io/badge/Docker-22D3EE?style=flat-square&logo=docker&logoColor=22D3EE&labelColor=0B1020)
 
 </div>
 
-<!--
-══════════════════════════════════════════════════════════
-  SETUP CHECKLIST
-══════════════════════════════════════════════════════════
+---
 
-  REQUIRED FILES TO UPLOAD TO YOUR REPO:
-  ├── README.md          ← this file
-  └── assets/
-      ├── banner.svg     ← animated ZAEX hologram header
-      ├── terminal.svg   ← animated compliance console bio
-      └── pipeline.svg   ← animated data flow diagram
+## Games
 
-  REPLACE THESE PLACEHOLDERS:
-  • dhanu-nagarajan  → your actual GitHub handle (x2 spots)
-  • progamedev         → your LinkedIn URL slug
+I build games. That is not a line on a timeline, it is the thing that taught me systems.
 
-  ALL SVG ANIMATIONS WORK BECAUSE:
-  • SVG files are served as <img src="./assets/file.svg">
-  • CSS @keyframes inside SVG files are fully supported
-  • No JavaScript required, no inline SVG stripping
-  • GitHub renders SVG CSS animations correctly this way
+Roblox experiences with more than **300 million player visits**. Authoritative servers. Real-time multiplayer state. Distributed events. Economies that break the instant one number is wrong.
 
-══════════════════════════════════════════════════════════
--->
+Here is the problem every multiplayer game has to solve. The server sends state a few times a second. Move a character to each position as it arrives and the motion is unwatchable. So you hold a buffer, interpolate between the positions, and accept that you are always rendering slightly in the past.
+
+<div align="center">
+
+<img src="./assets/realtime-systems.svg" alt="Animated netcode diagram. A fixed-timestep server tick strip pulses across the top. The middle lane shows an entity snapping between the eight discrete positions the server sent. The bottom lane shows the same entity interpolated into continuous motion, trailing the raw snapshots by exactly one tick. Caption: one tick of buffer buys smooth motion, choosing what to trade is the job. Concepts: authoritative server, client prediction, lag compensation, deterministic state, event ordering." />
+
+</div>
+
+The gold square is the truth. The green square is a lie, one tick stale, and it is the one players want. Every real-time system is a negotiation like that.
+
+None of this stopped being useful. A desynced game state and an unsupported tax answer fail in exactly the same way: quietly, confidently, and only in front of the person who checks.
+
+**M.Sc. Computer Games Technology**, University of London. Luau, real-time state, ML-driven mechanics, economy design.
+
+---
+
+## What I am working on now
+
+- Evaluation harnesses that catch a retrieval regression before it reaches anyone
+- Reranking that weighs authority and recency, not just similarity
+- Confidence that means something, and abstention that triggers when it should
+- Provenance that survives multi-step reasoning instead of dissolving in it
+- Safety boundaries for agents that call tools inside regulated workflows
+
+---
+
+## GitHub
+
+<div align="center">
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=daezoxx&bg_color=0B1020&color=E6EDF3&title_color=22D3EE&line=22D3EE&point=A78BFA&area_color=22D3EE&area=true&hide_border=true&radius=8&custom_title=Contribution%20Activity" alt="Contribution activity graph for GitHub user daezoxx over the past year." />
+
+<br /><br />
+
+<img src="./assets/streak.svg" alt="GitHub contribution streak for daezoxx: current streak, longest streak, and total contributions." />
+
+</div>
+
+---
+
+## Contact
+
+<div align="center">
+
+[![Email](https://img.shields.io/badge/Email-dhanu%40dhanu.dev-22D3EE?style=flat-square&logo=maildotru&logoColor=22D3EE&labelColor=0B1020)](mailto:dhanu@dhanu.dev)
+&nbsp;
+[![Website](https://img.shields.io/badge/Website-dhanu.dev-A78BFA?style=flat-square&logo=firefoxbrowser&logoColor=A78BFA&labelColor=0B1020)](https://dhanu.dev/)
+&nbsp;
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-progamedev-34D399?style=flat-square&logo=linkedin&logoColor=34D399&labelColor=0B1020)](https://linkedin.com/in/progamedev)
+
+</div>
