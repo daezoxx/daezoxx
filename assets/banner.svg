@@ -120,13 +120,13 @@
   <!-- Subtitle -->
   <text class="subtitle" x="450" y="136" text-anchor="middle"
         font-family="'Courier New',monospace" font-size="12" fill="#00f5ff" letter-spacing="5">
-    AI SYSTEMS ENGINEER  ·  TAXTECH INTELLIGENCE  ·  WORLDBUILDER
+    AI ENGINEERING LEAD  ·  COMMERCE INTELLIGENCE  ·  WORLDBUILDER
   </text>
 
   <!-- Status node -->
   <text class="node-text" x="450" y="172" text-anchor="middle"
         font-family="'Courier New',monospace" font-size="9" fill="#b400ff" letter-spacing="3">
-    [ NODE::SOLIQUE — REGULATORY INTELLIGENCE CORE — UPLINK: ACTIVE ]
+    [ NODE::OJC — CONTEXT LAKE RETRIEVAL CORE — UPLINK: ACTIVE ]
   </text>
 
   <!-- Status dots -->

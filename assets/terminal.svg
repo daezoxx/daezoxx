@@ -55,7 +55,7 @@
   <!-- Terminal title -->
   <text x="430" y="22" text-anchor="middle" font-family="'Courier New',monospace"
         font-size="10" fill="#00f5ff" letter-spacing="3" opacity="0.7">
-    ZAEX::COMPLIANCE-CONSOLE — v2.099 — UPLINK SECURE
+    ZAEX::CONTEXT-LAKE-CONSOLE — v2.099 — UPLINK SECURE
   </text>
 
   <!-- Side accent bar -->
@@ -63,22 +63,22 @@
 
   <!-- Line 1: prompt -->
   <text class="l1" x="22" y="68" font-family="'Courier New',monospace" font-size="12">
-    <tspan fill="#b400ff">zaex@solique</tspan><tspan fill="#445">:</tspan><tspan fill="#2ed573">~$</tspan><tspan fill="#00f5ff"> whoami</tspan>
+    <tspan fill="#b400ff">zaex@ojcommerce</tspan><tspan fill="#445">:</tspan><tspan fill="#2ed573">~$</tspan><tspan fill="#00f5ff"> whoami</tspan>
   </text>
 
   <!-- Line 2 -->
   <text class="l2" x="22" y="92" font-family="'Courier New',monospace" font-size="12" fill="#aaffee">
-    ▸  AI Engineer @ Solique · TaxTech &amp; Compliance Automation Systems
+    ▸  Lead — Software Engineering (AI) @ OJCommerce · Commerce AI Platform
   </text>
 
   <!-- Line 3 -->
   <text class="l3" x="22" y="114" font-family="'Courier New',monospace" font-size="12" fill="#aaffee">
-    ▸  LLM Orchestration · Hybrid Retrieval (BM25 + Vector) · RAG Pipelines
+    ▸  Enterprise Data Lake → Context Lake · Hybrid Retrieval (BM25 + Vector)
   </text>
 
   <!-- Line 4 -->
   <text class="l4" x="22" y="136" font-family="'Courier New',monospace" font-size="12" fill="#aaffee">
-    ▸  Regulatory Decision Engines · Provenance Tracking · Audit Trails
+    ▸  Product Search · Catalog Intelligence · Recommendations · LLM Agents
   </text>
 
   <!-- Line 5 -->
@@ -93,11 +93,11 @@
 
   <!-- Line 7: mission prompt -->
   <text class="l7" x="22" y="216" font-family="'Courier New',monospace" font-size="12">
-    <tspan fill="#b400ff">zaex@solique</tspan><tspan fill="#445">:</tspan><tspan fill="#2ed573">~$</tspan><tspan fill="#00f5ff"> cat mission.txt</tspan>
+    <tspan fill="#b400ff">zaex@ojcommerce</tspan><tspan fill="#445">:</tspan><tspan fill="#2ed573">~$</tspan><tspan fill="#00f5ff"> cat mission.txt</tspan>
   </text>
 
   <text class="l7" x="22" y="240" font-family="'Courier New',monospace" font-size="12" fill="#ffd700">
-    ██  "Turning regulatory chaos into structured, auditable intelligence."
+    ██  "Turning enterprise data lakes into context that AI can actually use."
   </text>
 
   <!-- Blinking cursor -->

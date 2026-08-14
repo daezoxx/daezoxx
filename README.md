@@ -1,17 +1,17 @@
 <!-- ══════════════════════════════════════════════════════════ -->
-<!--   ZAEX — REGULATORY INTELLIGENCE ARCHITECT               -->
+<!--   ZAEX — AI ENGINEERING LEAD                              -->
 <!--   GitHub Profile README — Production Grade               -->
 <!-- ══════════════════════════════════════════════════════════ -->
 
 <div align="center">
 
-<img src="./assets/banner.svg" alt="ZAEX — AI Systems Engineer · TaxTech Intelligence · Worldbuilder" width="900"/>
+<img src="./assets/banner.svg" alt="ZAEX — AI Engineering Lead · Commerce Intelligence · Worldbuilder" width="900"/>
 
 </div>
 
 <p align="center">
-<strong>AI Engineer at AskSolique</strong>, building intelligent search and retrieval systems for regulatory compliance.<br/>
-I design hybrid search pipelines that combine BM25 sparse retrieval with dense vector search across Elasticsearch and Qdrant, backed by RAG orchestration, reranking, and LLM-powered reasoning to surface precise, auditable answers from unstructured regulatory data.
+<strong>Lead — Software Engineering (AI) at OJCommerce</strong>, building the knowledge and retrieval layer over the enterprise data lake.<br/>
+I turn scattered enterprise data into a queryable context lake — hybrid retrieval pairing BM25 sparse search with dense vectors, backed by RAG orchestration, reranking, and LLM reasoning — then ship it into product search, catalog intelligence, recommendations, and internal agents.
 </p>
 
 <p align="center">
@@ -19,13 +19,13 @@ I design hybrid search pipelines that combine BM25 sparse retrieval with dense v
 Previously built game systems serving <strong>300M+ player visits</strong> on Roblox. Real-time state management, ML-driven mechanics, and large-scale concurrent systems.
 </p>
 
-<p align="center"><em>"Turning regulatory chaos into structured, auditable intelligence."</em></p>
+<p align="center"><em>"Turning enterprise data lakes into context that AI can actually use."</em></p>
 
 ---
 
 <div align="center">
 
-<img src="./assets/terminal.svg" alt="ZAEX Compliance Console: AI Engineer @ AskSolique, TaxTech & Compliance Automation, LLM Orchestration, Hybrid Retrieval (BM25 + Vector), RAG Pipelines, Regulatory Decision Engines, Provenance Tracking, Audit Trails, M.Sc Computer Games Technology, 300M+ game visits" width="860"/>
+<img src="./assets/terminal.svg" alt="ZAEX Context Lake Console: Lead Software Engineering (AI) at OJCommerce, Commerce AI Platform, Enterprise Data Lake to Context Lake, Hybrid Retrieval (BM25 + Vector), Product Search, Catalog Intelligence, Recommendations, LLM Agents, M.Sc Computer Games Technology, 300M+ game visits" width="860"/>
 
 </div>
 
@@ -35,10 +35,10 @@ Previously built game systems serving <strong>300M+ player visits</strong> on Ro
 
 <div align="center">
 
-| ⚖️ Regulatory Intelligence | 🤖 AI Agent Systems | 🌍 Scale Background |
+| 🧠 Context Lake & Retrieval | 🛒 Commerce AI Systems | 🌍 Scale Background |
 |:---|:---|:---|
-| Hybrid search (BM25 + dense vector), RAG pipelines, reranking, and LLM reasoning for tax compliance at **AskSolique**. Full audit trail from ingestion to decision. | LLM orchestration with safety guardrails, governance controls, and structured output validation. | 300M+ visits across Roblox titles. Real-time multiplayer systems, economy balancing, ML-driven mechanics. |
-| RAG · BM25 + Vector · Elasticsearch · Qdrant · PostgreSQL | Orchestration · Guardrails · Evaluation · Governance | Luau · Distributed State · Low-Latency Event Systems |
+| Knowledge base over the enterprise data lake at **OJCommerce**. Hybrid search (BM25 + dense vector), RAG pipelines, reranking, and grounded answers traceable back to source. | Product search & discovery, catalog and attribute intelligence, recommendation and pricing signals, and LLM agents with guardrails, evaluation, and structured output validation. | 300M+ visits across Roblox titles. Real-time multiplayer systems, economy balancing, ML-driven mechanics. |
+| RAG · BM25 + Vector · Elasticsearch · Qdrant · PostgreSQL | Search · Catalog · Recs · Agents · Evals | Luau · Distributed State · Low-Latency Event Systems |
 | ![LIVE](https://img.shields.io/badge/LIVE-Production-2ed573?style=flat-square&labelColor=001408) | ![DEV](https://img.shields.io/badge/IN_DEV-Building-ffd700?style=flat-square&labelColor=0e0a00) | ![SHIPPED](https://img.shields.io/badge/SHIPPED-300M%2B_Visits-00f5ff?style=flat-square&labelColor=011020) |
 
 </div>
@@ -47,7 +47,7 @@ Previously built game systems serving <strong>300M+ player visits</strong> on Ro
 
 <div align="center">
 
-<img src="./assets/pipeline.svg" alt="Compliance Intelligence Pipeline: INGEST (ETL, Streaming, Bulk Index) → PARSE (NLP, Structure, Regulatory Extract) → RETRIEVE (BM25 + Vector Hybrid Search) → REASON (LLM, RAG, Rerank, Confidence Score) → DECIDE (Risk, Classify, Score, Flag) → AUDIT TRAIL (Source Map, Provenance, Timestamps, IDs)" width="900"/>
+<img src="./assets/pipeline.svg" alt="Context Lake Retrieval Pipeline: INGEST (Data Lake, ETL, Catalog, Orders, Docs) → CONTEXT (Chunk, Embed, Enrich, Metadata) → RETRIEVE (BM25 + Vector Hybrid Search) → REASON (LLM, RAG, Rerank, Grounded Answers) → RANK (Relevance, Recs, Score, Personalize) → SERVE &amp; LEARN (Search, Recs, Agents, Evals, Feedback Loop)" width="900"/>
 
 </div>
 
@@ -94,28 +94,3 @@ Previously built game systems serving <strong>300M+ player visits</strong> on Ro
 [![LinkedIn](https://img.shields.io/badge/LINKEDIN-Connect-0a66c2?style=for-the-badge&logo=linkedin&logoColor=00f5ff&labelColor=011020)](https://linkedin.com/in/progamedev)
 
 </div>
-
-<!--
-══════════════════════════════════════════════════════════
-  SETUP CHECKLIST
-══════════════════════════════════════════════════════════
-
-  REQUIRED FILES TO UPLOAD TO YOUR REPO:
-  ├── README.md          ← this file
-  └── assets/
-      ├── banner.svg     ← animated ZAEX hologram header
-      ├── terminal.svg   ← animated compliance console bio
-      └── pipeline.svg   ← animated data flow diagram
-
-  REPLACE THESE PLACEHOLDERS:
-  • dhanu-nagarajan  → your actual GitHub handle (x2 spots)
-  • progamedev         → your LinkedIn URL slug
-
-  ALL SVG ANIMATIONS WORK BECAUSE:
-  • SVG files are served as <img src="./assets/file.svg">
-  • CSS @keyframes inside SVG files are fully supported
-  • No JavaScript required, no inline SVG stripping
-  • GitHub renders SVG CSS animations correctly this way
-
-══════════════════════════════════════════════════════════
--->

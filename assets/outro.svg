@@ -60,12 +60,12 @@
 
   <text class="sub" x="450" y="72" text-anchor="middle"
         font-family="'Courier New',monospace" font-size="10" fill="#00f5ff" letter-spacing="3">
-    ◈  ZAEX NODE ACTIVE  ·  REGULATORY CORE LIVE  ·  ALL SYSTEMS GO  ◈
+    ◈  ZAEX NODE ACTIVE  ·  CONTEXT LAKE LIVE  ·  ALL SYSTEMS GO  ◈
   </text>
 
   <text x="450" y="95" text-anchor="middle"
         font-family="'Courier New',monospace" font-size="8" fill="#2a3355" letter-spacing="2">
-    "Turning regulatory chaos into structured intelligence, one pipeline at a time."
+    "Turning enterprise data lakes into context that AI can actually use."
   </text>
 
   <!-- Scanline sweep out -->
