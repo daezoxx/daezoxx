@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="640" viewBox="0 0 900 640" role="img" aria-label="Regulatory intelligence lifecycle architecture diagram.">
-  <title>Regulatory Intelligence Lifecycle</title>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="640" viewBox="0 0 900 640" role="img" aria-label="Context lake retrieval lifecycle architecture diagram.">
+  <title>Context Lake Retrieval Lifecycle</title>
 
   <style>
     .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
@@ -40,8 +40,8 @@
   <rect x=".75" y=".75" width="898.5" height="638.5" rx="12" fill="none" stroke="#1E2A44" stroke-width="1.5"/>
 
   <!-- Header -->
-  <text class="mono" x="32" y="30" font-size="12" letter-spacing="3.2" fill="#22D3EE">REGULATORY INTELLIGENCE LIFECYCLE</text>
-  <text class="mono" x="868" y="30" font-size="10" letter-spacing="1.6" fill="#8FA3BF" text-anchor="end">SOURCE → RETRIEVAL → DECISION → AUDIT</text>
+  <text class="mono" x="32" y="30" font-size="12" letter-spacing="3.2" fill="#22D3EE">CONTEXT LAKE RETRIEVAL LIFECYCLE</text>
+  <text class="mono" x="868" y="30" font-size="10" letter-spacing="1.6" fill="#8FA3BF" text-anchor="end">DATA LAKE → RETRIEVAL → DECISION → TRACE</text>
   <path d="M32 44H868" stroke="#1E2A44"/>
 
   <!-- ══ BAND A · ACQUIRE ══ -->
@@ -50,8 +50,8 @@
   <g>
     <rect x="24" y="76" width="199" height="66" rx="7" fill="#0B1020" stroke="#22D3EE" stroke-opacity=".55"/>
     <text class="mono t" x="38" y="99" fill="#22D3EE">SOURCES</text>
-    <text class="mono d" x="38" y="117">Statutes · Rulings</text>
-    <text class="mono d" x="38" y="132">Guidance · Filings</text>
+    <text class="mono d" x="38" y="117">Catalog · Orders · Pricing</text>
+    <text class="mono d" x="38" y="132">Vendors · Docs · Content</text>
 
     <rect x="241" y="76" width="199" height="66" rx="7" fill="#0B1020" stroke="#22D3EE" stroke-opacity=".55"/>
     <text class="mono t" x="255" y="99" fill="#22D3EE">INGESTION</text>
@@ -61,12 +61,12 @@
     <rect x="458" y="76" width="199" height="66" rx="7" fill="#0B1020" stroke="#22D3EE" stroke-opacity=".55"/>
     <text class="mono t" x="472" y="99" fill="#22D3EE">PARSE + NORMALIZE</text>
     <text class="mono d" x="472" y="117">Sections · Tables</text>
-    <text class="mono d" x="472" y="132">Citations · References</text>
+    <text class="mono d" x="472" y="132">Attributes · Identifiers</text>
 
     <rect x="675" y="76" width="199" height="66" rx="7" fill="#0B1020" stroke="#22D3EE" stroke-opacity=".55"/>
-    <text class="mono t" x="689" y="99" fill="#22D3EE">REGULATORY METADATA</text>
-    <text class="mono d" x="689" y="117">Jurisdiction · Authority</text>
-    <text class="mono d" x="689" y="132">Effective dates · Version</text>
+    <text class="mono t" x="689" y="99" fill="#22D3EE">CONTEXT METADATA</text>
+    <text class="mono d" x="689" y="117">Domain · Source system</text>
+    <text class="mono d" x="689" y="132">Freshness · Version</text>
   </g>
   <g stroke="#22D3EE" stroke-width="1.4" opacity=".8">
     <path d="M226 109h9" marker-end="url(#ac)"/>
@@ -84,7 +84,7 @@
     <rect x="24" y="200" width="419" height="66" rx="7" fill="#0B1020" stroke="#A78BFA" stroke-opacity=".55"/>
     <text class="mono t" x="38" y="223" fill="#A78BFA">SPARSE INDEX</text>
     <text class="mono d" x="38" y="241">BM25 lexical matching · OpenSearch</text>
-    <text class="mono d" x="38" y="256">Statute numbers, defined terms, exact phrases</text>
+    <text class="mono d" x="38" y="256">SKUs, brand names, exact part numbers</text>
 
     <rect x="457" y="200" width="419" height="66" rx="7" fill="#0B1020" stroke="#A78BFA" stroke-opacity=".55"/>
     <text class="mono t" x="471" y="223" fill="#A78BFA">DENSE INDEX</text>
@@ -101,7 +101,7 @@
     <rect x="24" y="324" width="199" height="66" rx="7" fill="#0B1020" stroke="#A78BFA" stroke-opacity=".55"/>
     <text class="mono t" x="38" y="347" fill="#A78BFA">QUERY UNDERSTANDING</text>
     <text class="mono d" x="38" y="365">Intent · Expansion</text>
-    <text class="mono d" x="38" y="380">Jurisdiction + date scope</text>
+    <text class="mono d" x="38" y="380">Category + freshness scope</text>
 
     <rect x="241" y="324" width="199" height="66" rx="7" fill="#0B1020" stroke="#A78BFA" stroke-opacity=".55"/>
     <text class="mono t" x="255" y="347" fill="#A78BFA">HYBRID RETRIEVAL</text>
@@ -111,7 +111,7 @@
     <rect x="458" y="324" width="199" height="66" rx="7" fill="#0B1020" stroke="#A78BFA" stroke-opacity=".55"/>
     <text class="mono t" x="472" y="347" fill="#A78BFA">FUSION</text>
     <text class="mono d" x="472" y="365">Reciprocal rank fusion</text>
-    <text class="mono d" x="472" y="380">Authority weighting</text>
+    <text class="mono d" x="472" y="380">Source-of-truth weighting</text>
 
     <rect x="675" y="324" width="199" height="66" rx="7" fill="#0B1020" stroke="#A78BFA" stroke-opacity=".55"/>
     <text class="mono t" x="689" y="347" fill="#A78BFA">RERANK</text>
@@ -137,13 +137,13 @@
 
     <rect x="312" y="448" width="274" height="66" rx="7" fill="#0B1020" stroke="#F0B429" stroke-opacity=".55"/>
     <text class="mono t" x="326" y="471" fill="#F0B429">STRUCTURED DECISION</text>
-    <text class="mono d" x="326" y="489">Classification · Risk scoring</text>
+    <text class="mono d" x="326" y="489">Classification · Ranking signals</text>
     <text class="mono d" x="326" y="504">Confidence + abstention</text>
 
     <rect x="600" y="448" width="274" height="66" rx="7" fill="#0B1020" stroke="#34D399" stroke-opacity=".6"/>
     <text class="mono t" x="614" y="471" fill="#34D399">PROVENANCE RECORD</text>
     <text class="mono d" x="614" y="489">Span-level citations · Versions</text>
-    <text class="mono d" x="614" y="504">Trace id · Immutable audit log</text>
+    <text class="mono d" x="614" y="504">Trace id · Immutable event log</text>
   </g>
   <g stroke-width="1.4" opacity=".85">
     <path d="M301 481h9" stroke="#F0B429" marker-end="url(#ag)"/>

@@ -1,16 +1,16 @@
 <div align="center">
 
-<img src="./assets/hero.svg" alt="ZAEX. AI Systems Engineer, Regulatory Intelligence. Tax and compliance answers that survive an audit. AI Engineer at AskSolique. Retrieval: BM25 plus kNN, RRF fused. Grounding: span-level citations. Output: schema-validated. Background: 300M+ player-visit systems." />
+<img src="./assets/hero.svg" alt="ZAEX. AI Engineering Lead, Commerce Intelligence. Enterprise data turned into answers you can trace. Eng Lead (AI) at OJCommerce. Retrieval: BM25 plus kNN, RRF fused. Grounding: span-level citations. Output: schema-validated. Background: 300M+ player-visit systems." />
 
 </div>
 
-Ask a tax question. Get an answer with a citation. Sounds simple.
+Ask what a product costs. Get an answer with a source. Sounds simple.
 
-Now make it true for Indian tax law, where the statute was amended in 2017, three benches disagree, and the circular that settles it landed last March.
+Now make it true across an enterprise data lake, where the ERP, the vendor feed and the marketplace listing all describe the same product differently, and two of them are a day stale.
 
 That is the problem I work on.
 
-**AI Engineer at AskSolique.**
+**Lead — Software Engineering (AI) at OJCommerce.**
 
 ---
 
@@ -18,7 +18,7 @@ That is the problem I work on.
 
 Most AI answers are confident. Very few are checkable.
 
-I build the part that makes them checkable. Retrieval that knows a Supreme Court judgment outranks a practitioner's note. Fusion that knows the amendment replaced the rule it amended. A citation guard that reads the finished answer, finds the claim, and blocks it when the cited source does not actually say that.
+I build the part that makes them checkable. Retrieval that knows the ERP record outranks a scraped description. Fusion that knows the newer feed supersedes the row it replaced. A citation guard that reads the finished answer, finds the claim, and blocks it when the cited record does not actually say that.
 
 The model is the easy part. The evidence is the whole job.
 
@@ -28,23 +28,23 @@ The model is the easy part. The evidence is the whole job.
 
 <div align="center">
 
-<img src="./assets/regulatory-intelligence-architecture.svg" alt="Regulatory intelligence lifecycle. Stage 1, Acquire: sources (statutes, rulings, guidance, filings) flow into ingestion (connectors, scheduling, change detection), then parse and normalize (sections, tables, citations, references), then regulatory metadata (jurisdiction, authority, effective dates, version). Stage 2, Index: chunking and metadata strategy applied before write, feeding a sparse index (BM25 lexical matching on OpenSearch for statute numbers, defined terms and exact phrases) and a dense index (embeddings and kNN vector search for paraphrase and concept-level recall). Stage 3, Retrieve: query understanding (intent, expansion, jurisdiction and date scope), then hybrid retrieval (sparse and dense in parallel with metadata pre-filtering), then fusion (reciprocal rank fusion, dedup, authority weighting), then rerank (cross-encoder and LLM, precision at low k). Stage 4, Reason and decide: grounded reasoning (RAG over ranked evidence, citation-bound generation), then structured decision (classification, risk scoring, confidence and abstention), then provenance record (span-level citations, versions, trace id, immutable audit log). Offline evaluation feeds back into retrieval, fusion and rerank tuning. Stage 5, across every stage: evaluation, observability, guardrails, versioning, confidence, human review." />
+<img src="./assets/retrieval-architecture.svg" alt="Context lake retrieval lifecycle, summarised in the header as data lake, retrieval, decision, trace. Stage 1, Acquire: sources (catalog, orders, pricing, vendors, docs, content) flow into ingestion (connectors, scheduling, change detection), then parse and normalize (sections, tables, attributes, identifiers), then context metadata (domain, source system, freshness, version). Stage 2, Index: chunking and metadata strategy applied before write, feeding a sparse index (BM25 lexical matching on OpenSearch for SKUs, brand names and exact part numbers) and a dense index (embeddings and kNN vector search for paraphrase and concept-level recall). Stage 3, Retrieve: query understanding (intent, expansion, category and freshness scope), then hybrid retrieval (sparse and dense in parallel with metadata pre-filtering), then fusion (reciprocal rank fusion, source-of-truth weighting), then rerank (cross-encoder and LLM, precision at low k). Stage 4, Reason and decide: grounded reasoning (RAG over ranked evidence, citation-bound generation), then structured decision (classification, ranking signals, confidence and abstention), then provenance record (span-level citations, versions, trace id, immutable event log). Offline evaluation feeds back into retrieval, fusion and rerank tuning. Stage 5, across every stage: evaluation, observability, guardrails, versioning, confidence, human review." />
 
 </div>
 
-`sources → ingestion → parse & normalize → regulatory metadata → sparse + dense indexes → query understanding → hybrid retrieval → RRF fusion → rerank → grounded reasoning → structured decision → provenance record`
+`sources → ingestion → parse & normalize → context metadata → sparse + dense indexes → query understanding → hybrid retrieval → RRF fusion → rerank → grounded reasoning → structured decision → provenance record`
 
 ---
 
 ## Why this is not just semantic search
 
-**Not all sources are equal.** A Supreme Court judgment and a practitioner's note are both text. Only one of them ends an argument.
+**Not all sources are equal.** The ERP record and a scraped description are both text. Only one of them settles a dispute.
 
-**"What is the rule" is an incomplete question.** The complete one ends with "as at when".
+**"What is the price" is an incomplete question.** The complete one ends with "as at when".
 
-**Right document, wrong version, still wrong.** Amendments supersede. Retrieval has to know the date, not just the topic.
+**Right product, wrong version, still wrong.** A newer feed supersedes an older one. Retrieval has to know the timestamp, not just the topic.
 
-**Sources disagree, and that is normal.** Averaging two conflicting authorities gives you an answer that is true nowhere. Surface the conflict instead.
+**Sources disagree, and that is normal.** Averaging two conflicting records gives you an answer that is true nowhere. Surface the conflict instead.
 
 **A citation is not a link.** It is a span of text that contains the claim. Anything looser is decoration.
 
@@ -56,7 +56,7 @@ The model is the easy part. The evidence is the whole job.
 
 <div align="center">
 
-<img src="./assets/engineering-console.svg" alt="Regulatory retrieval failure modes mapped to engineering controls. Superseded rule retrieved as current is prevented by effective-date and version-aware filtering. Conflicting authorities ranked equally is prevented by source-authority weighting during fusion. Citation does not support the claim is prevented by span-level grounding verification. High confidence on thin evidence is prevented by coverage-aware scoring and abstention. Prose output breaking downstream systems is prevented by schema-validated structured output. Silent regression after a config change is prevented by offline evaluation gates before deploy." />
+<img src="./assets/engineering-console.svg" alt="Enterprise retrieval failure modes mapped to engineering controls. Stale catalog data served as current is prevented by freshness windows and change-data capture. Source systems disagreeing on one product is prevented by source-of-truth precedence during fusion. A cited source that does not support the claim is prevented by span-level grounding verification. High confidence on thin evidence is prevented by coverage-aware scoring and abstention. Prose output breaking downstream systems is prevented by schema-validated structured output. Silent regression after a config change is prevented by offline evaluation gates before deploy. The two columns are headed what goes wrong and what prevents it. Footer: an answer is only as good as the evidence it can show and the ranking it can justify." />
 
 </div>
 
@@ -82,10 +82,10 @@ The model is the easy part. The evidence is the whole job.
 
 | Domain | Detail |
 | :--- | :--- |
-| **Retrieval** | BM25 · kNN vector search · reciprocal rank fusion · query expansion · metadata and date filtering · cross-encoder and LLM reranking |
+| **Retrieval** | BM25 · kNN vector search · reciprocal rank fusion · query expansion · metadata and freshness filtering · cross-encoder and LLM reranking |
 | **Reasoning** | RAG orchestration · multi-agent deliberation · planner and researcher agents · structured generation · tool calling · citation guards |
-| **Data** | Regulatory parsing · ETL · chunking and metadata strategy · lineage · PostgreSQL · OpenSearch |
-| **Reliability** | Blinded LLM evaluation harnesses · guardrails · provenance · audit trails · distributed tracing · PII redaction |
+| **Data** | Data lake ingestion · catalog and document parsing · ETL · chunking and metadata strategy · lineage · PostgreSQL · OpenSearch |
+| **Reliability** | Blinded LLM evaluation harnesses · guardrails · provenance · immutable event logs · distributed tracing · PII redaction |
 | **Delivery** | Python · FastAPI · SSE streaming · async pipelines · Docker |
 | **Scale** | Real-time systems · concurrent state · event-driven architecture · low-latency engineering · Luau |
 
@@ -121,7 +121,7 @@ Here is the problem every multiplayer game has to solve. The server sends state 
 
 The gold square is the truth. The green square is a lie, one tick stale, and it is the one players want. Every real-time system is a negotiation like that.
 
-None of this stopped being useful. A desynced game state and an unsupported tax answer fail in exactly the same way: quietly, confidently, and only in front of the person who checks.
+None of this stopped being useful. A desynced game state and an ungrounded product answer fail in exactly the same way: quietly, confidently, and only in front of the person who checks.
 
 **M.Sc. Computer Games Technology**, University of London. Luau, real-time state, ML-driven mechanics, economy design.
 
@@ -130,10 +130,10 @@ None of this stopped being useful. A desynced game state and an unsupported tax 
 ## What I am working on now
 
 - Evaluation harnesses that catch a retrieval regression before it reaches anyone
-- Reranking that weighs authority and recency, not just similarity
+- Reranking that weighs source authority and freshness, not just similarity
 - Confidence that means something, and abstention that triggers when it should
 - Provenance that survives multi-step reasoning instead of dissolving in it
-- Safety boundaries for agents that call tools inside regulated workflows
+- Safety boundaries for agents that call tools inside live commerce workflows
 
 ---
 
