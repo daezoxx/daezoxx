@@ -10,7 +10,7 @@ Now make it true across an enterprise data lake, where the ERP, the vendor feed 
 
 That is the problem I work on.
 
-**Lead — Software Engineering (AI) at OJCommerce.**
+**Lead - Software Engineering (AI) at OJCommerce.**
 
 ---
 
