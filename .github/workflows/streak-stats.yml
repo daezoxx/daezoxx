@@ -1,10 +1,11 @@
-name: Streak Stats
+name: Profile Cards
 
-# Renders the contribution streak card *inside the runner* and commits the SVG
-# to this repository. The README then loads a local asset instead of calling a
-# public rendering service at page-view time, which is what made the previous
-# card unreliable: the hosted endpoint answers in 10-17s, far beyond the
-# timeout GitHub's image proxy (camo) allows before it caches a failure.
+# Renders the contribution cards *inside the runner* and commits the SVGs to
+# this repository. The README then loads local assets instead of calling
+# public rendering services at page-view time, which is what made the previous
+# cards unreliable: hosted endpoints answer in 10-17s, far beyond the timeout
+# GitHub's image proxy (camo) allows before it caches a failure - and the
+# activity-graph endpoint eventually stopped answering at all (HTTP 402).
 
 on:
   workflow_dispatch:
@@ -14,6 +15,7 @@ on:
   push:
     paths:
       - .github/workflows/streak-stats.yml
+      - .github/scripts/activity_graph.py
 
 # Read-only by default; the single job that needs to push widens it.
 permissions:
@@ -25,7 +27,7 @@ concurrency:
 
 jobs:
   generate:
-    name: Generate and commit streak card
+    name: Generate and commit contribution cards
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -52,15 +54,25 @@ jobs:
           # design system; animations are disabled so the card is static.
           options: "user=${{ github.repository_owner }}&type=svg&hide_border=true&border_radius=10&background=0B1020&stroke=1E2A44&ring=22D3EE&fire=F0B429&currStreakNum=E6EDF3&currStreakLabel=22D3EE&sideNums=E6EDF3&sideLabels=8FA3BF&dates=8FA3BF&excludeDaysLabel=8FA3BF&disable_animations=true"
 
-      - name: Commit card when it changed
+      - name: Generate activity graph
+        # Plain stdlib Python against the GraphQL contributions API - no third
+        # party action, so nothing to pin or audit beyond this repository.
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 .github/scripts/activity_graph.py --self-check
+          python3 .github/scripts/activity_graph.py "${{ github.repository_owner }}" assets/activity-graph.svg
+
+      - name: Commit cards when they changed
         run: |
           set -euo pipefail
-          if [ -z "$(git status --porcelain -- assets/streak.svg)" ]; then
-            echo "Streak card is unchanged. Nothing to commit."
+          cards="assets/streak.svg assets/activity-graph.svg"
+          if [ -z "$(git status --porcelain -- $cards)" ]; then
+            echo "Contribution cards are unchanged. Nothing to commit."
             exit 0
           fi
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/streak.svg
-          git commit -m "chore(assets): refresh contribution streak card"
+          git add $cards
+          git commit -m "chore(assets): refresh contribution cards"
           git push
