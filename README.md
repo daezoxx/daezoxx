@@ -141,7 +141,7 @@ None of this stopped being useful. A desynced game state and an ungrounded produ
 
 <div align="center">
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=daezoxx&bg_color=0B1020&color=E6EDF3&title_color=22D3EE&line=22D3EE&point=A78BFA&area_color=22D3EE&area=true&hide_border=true&radius=8&custom_title=Contribution%20Activity" alt="Contribution activity graph for GitHub user daezoxx over the past year." />
+<img src="./assets/activity-graph.svg" alt="Weekly GitHub contribution totals for daezoxx over the past year, plotted as a line." />
 
 <br /><br />
 
